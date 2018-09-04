@@ -3,10 +3,10 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="../../../../vuehao/static/img/l1.png" alt="">
+        <img src="../../static/img/l1.png" alt="">
       </div>
-      <div class="swiper-slide"><img src="../../../../vuehao/static/img/l2.png" alt=""></div>
-      <div class="swiper-slide"><img src="../../../../vuehao/static/img/l3.png" alt=""></div>
+      <div class="swiper-slide"><img src="../../static/img/l2.png" alt=""></div>
+      <div class="swiper-slide"><img src="../../static/img/l3.png" alt=""></div>
     </div>
 
     <div class="swiper-pagination" ></div>

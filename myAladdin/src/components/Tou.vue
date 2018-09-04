@@ -1,9 +1,9 @@
 <template>
   <div class="box">
    <div class="top">
-     <img src="../../../../vuehao/static/img/tl.png" alt="">
-     <img src="../../../../vuehao/static/img/tr.png" alt="">
-     <img src="../../../../vuehao/static/img/tz.png" alt="" class="tz">
+     <img src="../../static/img/tl.png" alt="">
+     <img src="../../static/img/tr.png" alt="">
+     <img src="../../static/img/tz.png" alt="" class="tz">
      <input  @click = "sou" type="text" placeholder="输入商品关键词">
    </div>
     <ul class="top_1">
@@ -14,11 +14,11 @@
     </ul>
 
   <ul class="end">
-    <li><img src="../../../../vuehao/static/img/end1.png" alt=""></li>
-    <li><img src="../../../../vuehao/static/img/end2.png" alt=""></li>
-    <li><img src="../../../../vuehao/static/img/end5.png" alt=""></li>
-    <li><img src="../../../../vuehao/static/img/end4.png" alt=""></li>
-    <li><img src="../../../../vuehao/static/img/end3.png" alt=""></li>
+    <li><img src="../../static/img/end1.png" alt=""></li>
+    <li><img src="../../static/img/end2.png" alt=""></li>
+    <li><img src="../../static/img/end5.png" alt=""></li>
+    <li><img src="../../static/img/end4.png" alt=""></li>
+    <li><img src="../../static/img/end3.png" alt=""></li>
   </ul>
 
   </div>
