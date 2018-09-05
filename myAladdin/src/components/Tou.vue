@@ -7,10 +7,10 @@
      <input  @click = "sou" type="text" placeholder="输入商品关键词">
    </div>
     <ul class="top_1">
-      <li>推荐</li>
-      <li>贼惦记</li>
-      <li>美食</li>
-      <li>母婴</li>
+      <li><router-link to="/one">推荐</router-link></li>
+      <li><router-link to="/two">贼惦记</router-link></li>
+      <li><router-link to="/three">美食</router-link></li>
+      <li><router-link to="/four">母婴</router-link></li>
     </ul>
 
   <ul class="end">
@@ -51,10 +51,13 @@
     height: 0.98rem;
     border-top:solid #e6e6e6 ;
     border-bottom:solid #e6e6e6;
+    z-index: 3;
+    background: #ffffff;
     position: fixed;
     bottom: 0;
     display: flex;
     justify-content: space-around;
+
   }
   /*end*/
 
@@ -67,10 +70,13 @@
   justify-content: space-around;
   background-color: #ffffff;
 }
-.top_1>li{
+.top_1 li{
   line-height: 0.6rem;
 }
-.top_1>li:hover{
+  .top_1>li>a{
+    color: #000;
+  }
+.top_1>li>a:hover{
   color: red;
 }
   /*一*/
@@ -78,6 +84,7 @@
     width: 100%;
     height: 1.1rem;
     background-color: #e53e42;
+    position: fixed;
     position: relative;
   }
   .top>img:nth-child(1){

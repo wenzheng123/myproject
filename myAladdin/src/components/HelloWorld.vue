@@ -1,13 +1,23 @@
 <template>
   <div class="hello">
     <aa></aa>
-    <bb></bb>
+    <router-view/>
+    <!--<bb></bb>-->
+    <!--<four></four>-->
+    <!--<three></three>-->
+    <!--<cc></cc>-->
+   <!--<two></two>-->
+
   </div>
 </template>
 
 <script>
   import Tou from "@/components/Tou"
   import Lb from "@/components/Lb"
+  import Zone from "@/components/Zone"
+  import Ztwo from "@/components/Ztwo"
+  import Zthree from "@/components/Zthree"
+  import Zfour from "@/components/Zfour"
 export default {
   name: 'HelloWorld',
   data () {
@@ -17,7 +27,11 @@ export default {
   },
   components:{
     aa:Tou,
-    bb:Lb
+    bb:Lb,
+    cc:Zone,
+    two:Ztwo,
+    three:Zthree,
+    four:Zfour
   }
 }
 </script>
