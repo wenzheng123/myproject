@@ -56,6 +56,41 @@ export default new Router({
 
 
     },
+    {
+      path:'/person',
+      name:'PersonalCenter',
+      component: PersonalCenter,
+      children:[
+        {
+          path:'/register',
+          name:'Register',
+          component:Register
+        },
+        {
+          path: '/login',
+          name: 'Login',
+          component: Login,
+          redirect:'/login1',
+          children:[
+            {
+              path:'/login1',
+              name:'Login1',
+              component:Login1
+            },
+            {
+              path:'/login2',
+              name:'Login2',
+              component:Login2
+            },
+            {
+              path:'/login3',
+              name:'Login3',
+              component:Login3
+            }
+          ],
+        }
+      ]
+    },
 
   ]
 })
