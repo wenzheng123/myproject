@@ -2,10 +2,11 @@
   <div class="box">
    <div class="top">
      <img src="../../static/img/tl.png" alt="">
-     <img src="../../static/img/tr.png" alt="">
+     <router-link to="/news"><img src="../../static/img/tr.png" alt="" class="news"></router-link>
      <img src="../../static/img/tz.png" alt="" class="tz">
-     <input  @click = "sou" type="text" placeholder="输入商品关键词">
+     <router-link to="/seek"><input  @click = "sou" type="text" placeholder="输入商品关键词"></router-link>
    </div>
+
     <ul class="top_1">
       <li><router-link to="/one">推荐</router-link></li>
       <li><router-link to="/two">贼惦记</router-link></li>
@@ -34,7 +35,8 @@
             console.log(tz)
            tz[0].style.display = "none"
           }
-      }
+      },
+
     }
 </script>
 
@@ -92,7 +94,7 @@
      left: 0.24rem;
      top: 0.44rem;
    }
-  .top>img:nth-child(2){
+  .news{
     position: absolute;
     right: 0.2rem;
     top: 0.4rem;
@@ -100,17 +102,15 @@
   .top input{
     width: 4rem;
     height: 0.48rem;
-    /*margin-top: 0.15rem;*/
     border-radius: 0.1rem;
     position: absolute;
     top: 0.36rem;
     left: 1.94rem;
+    font-size: 0.3rem;
   }
-  input::-webkit-input-placeholder{ /*WebKit browsers*/
+  input::-webkit-input-placeholder{
     color: red;
-    font-size: 0.1rem;
     text-align: center;
-    line-height: 0.08rem;
   }
   .tz{
     position: absolute;

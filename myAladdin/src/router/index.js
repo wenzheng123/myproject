@@ -7,6 +7,11 @@ import Lb from '@/components/Lb'
 import Ztwo from "@/components/Ztwo"
 import Zthree from "@/components/Zthree"
 import Zfour from "@/components/Zfour"
+import Seek from "@/components/Seek"
+import Monitor from "@/components/Monitor"
+import News from "@/components/News"
+import Sp from "@/components/Sp"
+import Cate from "@/components/Cate"
 Vue.use(Router)
 
 export default new Router({
@@ -16,11 +21,6 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld,
       children:[
-    // {
-    //   path:"/",
-    //   name:'Tou',
-    //   component:Tou,
-    // },
         {
           path:'/',
           name:'Zone',
@@ -56,6 +56,30 @@ export default new Router({
 
 
     },
-
+    {
+      path:"/seek",
+      name:"Seek",
+      component:Seek
+    },
+    {
+      path:"/mo",
+      name:"Monitor",
+      component:Monitor
+    },
+    {
+      path:"/news",
+      name:"News",
+      component:News
+    },
+    {
+      path:"/sp",
+      name:"Sp",
+      component:Sp
+    },
+    {
+      path:"/cate",
+      name:"Cate",
+      component:Cate
+    },
   ]
 })

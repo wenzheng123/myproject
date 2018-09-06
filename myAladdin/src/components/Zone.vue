@@ -90,7 +90,6 @@
     width: 100%;
     height: 3.1rem;
     font-size: 0.25rem;
-    /*overflow: hidden;*/
     display: flex;
     justify-content: space-between;
     text-align: center;

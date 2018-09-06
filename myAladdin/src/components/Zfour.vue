@@ -8,21 +8,21 @@
     </div>
   <!--二-->
   <div class="one4">
-    <img src="../../static/img/four1.png" alt="">
+    <router-link to="/sp"><img src="../../static/img/four1.png" alt=""></router-link>
     <ul class="one4_1">
       <li>
         <img src="../../static/img/four2.png" alt="">
-        <p>不易脱妆口红</p>
+        <p>诺优能幼儿配</p>
         <span>¥59</span>
       </li>
       <li>
         <img src="../../static/img/four2.png" alt="">
-        <p>不易脱妆口红</p>
+        <p>诺优能幼儿配</p>
         <span>¥129</span>
       </li>
       <li>
         <img src="../../static/img/four2.png" alt="">
-        <p>不易脱妆口红</p>
+        <p>诺优能幼儿配</p>
         <span>¥88</span>
       </li>
     </ul>
@@ -93,7 +93,7 @@
     text-align: center;
 
   }
-  .one4>img:nth-child(1){
+  .one4>a>img{
     width: 100%;
     height: 100%;
   }

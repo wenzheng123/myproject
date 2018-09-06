@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <aa></aa>
+    <!--<news></news>-->
+    <!--<mo></mo>-->
+    <!--<seek></seek>-->
     <router-view/>
     <!--<bb></bb>-->
     <!--<four></four>-->
@@ -18,6 +21,9 @@
   import Ztwo from "@/components/Ztwo"
   import Zthree from "@/components/Zthree"
   import Zfour from "@/components/Zfour"
+  import Seek from "@/components/Seek"
+  import Monitor from "@/components/Monitor"
+  import News from "@/components/News"
 export default {
   name: 'HelloWorld',
   data () {
@@ -31,7 +37,11 @@ export default {
     cc:Zone,
     two:Ztwo,
     three:Zthree,
-    four:Zfour
+    four:Zfour,
+    seek:Seek,
+    mo:Monitor,
+    news:News
+
   }
 }
 </script>
