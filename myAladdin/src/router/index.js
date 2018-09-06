@@ -7,6 +7,12 @@ import Lb from '@/components/Lb'
 import Ztwo from "@/components/Ztwo"
 import Zthree from "@/components/Zthree"
 import Zfour from "@/components/Zfour"
+import PersonalCenter from '@/components/PersonalCenter'
+import Login from '@/components/Login'
+import Login1 from '@/components/Login1'
+import Login2 from '@/components/Login2'
+import Login3 from '@/components/Login3'
+import Register from '@/components/Register'
 Vue.use(Router)
 
 export default new Router({
