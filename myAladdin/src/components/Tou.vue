@@ -1,7 +1,9 @@
 <template>
   <div class="box">
    <div class="top">
+     <router-link to="/" class="nav1">
      <img src="../../static/img/tl.png" alt="">
+     </router-link>
      <router-link to="/news"><img src="../../static/img/tr.png" alt="" class="news"></router-link>
      <img src="../../static/img/tz.png" alt="" class="tz">
      <router-link to="/seek"><input  @click = "sou" type="text" placeholder="输入商品关键词"></router-link>
@@ -95,7 +97,7 @@
     position: fixed;
     position: relative;
   }
-  .top>img:nth-child(1){
+  .nav1 img{
      position: absolute;
      left: 0.24rem;
      top: 0.44rem;

@@ -4,7 +4,6 @@
     <!--<news></news>-->
     <!--<mo></mo>-->
     <!--<seek></seek>-->
-    <router-view/>
     <!--<bb></bb>-->
     <!--<four></four>-->
     <!--<three></three>-->
