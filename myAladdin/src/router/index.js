@@ -25,6 +25,7 @@ import Login1 from '@/components/Login1'
 import Login2 from '@/components/Login2'
 import Login3 from '@/components/Login3'
 import Register from '@/components/Register'
+import CutGoods from '@/components/CutGoods'
 Vue.use(Router)
 
 export default new Router({
@@ -33,12 +34,8 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld,
+      redirect:'/one',
       children:[
-        {
-          path:'/',
-          name:'Zone',
-          component:Zone
-        },
         {
           path:'/lunbo',
           name:'Lb',
@@ -87,6 +84,11 @@ export default new Router({
           }
         ]
       }]
+    },
+    {
+      path:'/CutGoods',
+      name:'CutGoods',
+      component:CutGoods
     },
     {
       path: '/Facial',
