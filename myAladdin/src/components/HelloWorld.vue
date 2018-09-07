@@ -1,8 +1,6 @@
 <template>
   <div class="hello">
     <aa></aa>
-<<<<<<< HEAD
-=======
     <!--<news></news>-->
     <!--<mo></mo>-->
     <!--<seek></seek>-->
@@ -12,8 +10,6 @@
     <!--<three></three>-->
     <!--<cc></cc>-->
    <!--<two></two>-->
-
->>>>>>> b166dddcca04b378e7d8ac5b8cf43b684af08d92
   </div>
 
 </template>
@@ -38,8 +34,6 @@ export default {
   components:{
     aa:Tou,
     bb:Lb,
-<<<<<<< HEAD
-=======
     cc:Zone,
     two:Ztwo,
     three:Zthree,
@@ -48,7 +42,6 @@ export default {
     mo:Monitor,
     news:News
 
->>>>>>> b166dddcca04b378e7d8ac5b8cf43b684af08d92
   }
 }
 </script>
