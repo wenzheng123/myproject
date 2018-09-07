@@ -31,6 +31,7 @@ module.exports = {
       'jquery': 'jquery'
     }
   },
+<<<<<<< HEAD
   // 添加代码
   plugins: [
     new webpack.ProvidePlugin({
@@ -38,6 +39,12 @@ module.exports = {
       jQuery: "jquery",
       jquery: "jquery",
       "window.jQuery": "jquery"
+=======
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+>>>>>>> b166dddcca04b378e7d8ac5b8cf43b684af08d92
     })
   ],
   module: {

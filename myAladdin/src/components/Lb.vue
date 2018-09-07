@@ -5,7 +5,8 @@
       <div class="swiper-slide">
         <img src="../../static/img/l1.png" alt="">
       </div>
-      <div class="swiper-slide"><img src="../../static/img/l2.png" alt=""></div>
+      <div class="swiper-slide"><router-link to="/cate"><img src="../../static/img/l2.png" alt=""> </router-link></div>
+
       <div class="swiper-slide"><img src="../../static/img/l3.png" alt=""></div>
     </div>
 
@@ -23,6 +24,7 @@
       mounted(){
         var mySwiper = new Swiper('.swiper-container', {
           //竖直  vertical  水平 horizontal
+          loop:true,
           direction: 'horizontal',
           speed: 1000,
           autoplay: true,
