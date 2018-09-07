@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <aa></aa>
-    <bb></bb>
   </div>
+
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
   },
   components:{
     aa:Tou,
-    bb:Lb
+    bb:Lb,
   }
 }
 </script>

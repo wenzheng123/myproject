@@ -14,13 +14,18 @@
     </ul>
 
   <ul class="end">
-    <li><img src="../../static/img/end1.png" alt=""></li>
+    <li>
+      <router-link to="/Sort">
+        <img src="../../static/img/end1.png" alt="">
+      </router-link>
+
+    </li>
     <li><img src="../../static/img/end2.png" alt=""></li>
     <li><img src="../../static/img/end5.png" alt=""></li>
     <li><img src="../../static/img/end4.png" alt=""></li>
     <li><img src="../../static/img/end3.png" alt=""></li>
   </ul>
-
+    <router-view></router-view>
   </div>
 </template>
 
@@ -52,6 +57,7 @@
     border-top:solid #e6e6e6 ;
     border-bottom:solid #e6e6e6;
     position: fixed;
+    z-index: 99;
     bottom: 0;
     display: flex;
     justify-content: space-around;
