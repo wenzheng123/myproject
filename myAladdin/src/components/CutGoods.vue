@@ -1,50 +1,52 @@
 <template>
   <div class="content" >
-    <div class="top">
-      <router-link to="/">
-      <img src="../../static/img/seek1.png" alt="">
-      </router-link>
-      <p >这些都是“断货王”···</p>
-      <a href="">
+  <div class="top">
+    <router-link to="/">
+      <img class="return" src="../../static/img/seek1.png" alt="">
+    </router-link>
+    <p >这些都是“断货王”···</p>
+    <a href="">
       <img src="../../static/img/fenxiang.png" alt="">
-      </a>
-    </div>
-      <ul class="top_1">
-      </ul>
-      <div class="one4" v-for="num in 3">
-        <img src="../../static/img/two3.png" alt="">
-        <ul class="one4_1">
-          <li>
-            <img src="../../static/img/two4.png" alt="">
-            <p>不易脱妆口红</p>
-            <span>¥59</span>
-            <div class="qiang">
-            <p>还剩1000件</p>
-              <p class="qiang">马上去抢</p>
-            </div>
-          </li>
-          <li>
-            <img src="../../static/img/two5.png" alt="">
-            <p>花蕊唇彩</p>
-            <span>￥129</span>
-            <div class="qiang">
-              <p>还剩1000件</p>
-              <p >马上去抢</p>
-            </div>
-          </li>
-          <li>
-            <img src="../../static/img/two6.png" alt="">
-            <p>娇吻玉口红</p>
-            <span>￥88</span>
-            <div class="qiang">
-              <p>还剩1000件</p>
-              <p class="qiang">马上去抢</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    <End></End>
-    </div>
+    </a>
+  </div>
+  <ul class="top_1">
+  </ul>
+  <div class="one4" v-for="num in 3">
+    <img src="../../static/img/two3.png" alt="">
+    <ul class="one4_1">
+      <li>
+        <img src="../../static/img/two4.png" alt="">
+        <p>不易脱妆口红</p>
+        <span>¥59</span>
+        <div class="qiang">
+          <p>还剩1000件</p>
+          <p class="qiang">马上去抢</p>
+        </div>
+      </li>
+      <li>
+        <router-link to="/Details">
+        <img src="../../static/img/two5.png" alt="">
+        <p>花蕊唇彩</p>
+        <span>￥129</span>
+        <div class="qiang">
+          <p>还剩1000件</p>
+          <p >马上去抢</p>
+        </div>
+        </router-link>
+      </li>
+      <li>
+        <img src="../../static/img/two6.png" alt="">
+        <p>娇吻玉口红</p>
+        <span>￥88</span>
+        <div class="qiang">
+          <p>还剩1000件</p>
+          <p class="qiang">马上去抢</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <End></End>
+</div>
 
 </template>
 
@@ -63,7 +65,6 @@
     width: 100%;
     height: 0.6rem;
     padding-top: 1.1rem;
-    font-size: 0.3rem;
     background-color: #ffffff;
   }
   /*一*/
@@ -72,6 +73,7 @@
     height: 1.1rem;
     background-color: #e53e42;
     position: fixed;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
   }
@@ -89,6 +91,10 @@
     position: relative;
     margin: 0 0.3rem;
   }
+  .top .return{
+    width: 0.25rem;
+    height: 0.4rem;
+  }
   .top img{
     width: 0.35rem;
     height: 0.35rem;
@@ -99,6 +105,7 @@
   }
   .content{
     margin-bottom: 1rem;
+    color: #666666;
   }
   .one4{
     margin-top: 0.2rem;
@@ -110,7 +117,10 @@
     height: 2.45rem;
     border-right: solid #cccc;
   }
-  .one4_1>li>span{
+  .one4_1 li a{
+    color: #666666;
+  }
+  .one4_1>li span{
     color: #f00;
   }
   .one4_1 {
@@ -131,17 +141,19 @@
     height: 100%;
   }
   .qiang>p:nth-of-type(1){
+    margin: 0.05rem 0;
     font-size: 0.2rem;
   }
   .qiang>p:nth-of-type(2){
     width: 1.4rem;
     height: 0.3rem;
+    cursor: pointer;
     background-color: #e53e42;
     font-size: 0.2rem;
     color: #ffffff;
     line-height: 0.3rem;
     border-radius: 0.3rem;
-    margin: 0 auto;
+    margin: 0.05rem auto;
   }
 
 </style>

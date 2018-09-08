@@ -26,10 +26,24 @@ import Login2 from '@/components/Login2'
 import Login3 from '@/components/Login3'
 import Register from '@/components/Register'
 import CutGoods from '@/components/CutGoods'
+import Details from '@/components/Details'
+import DetailsCover from '@/components/DetailsCover'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '/Details',
+      name: 'Details',
+      component: Details,
+      children:[
+        {
+          path:'/DetailsCover',
+          name:'DetailsCover',
+          component:DetailsCover
+        }
+      ]
+    },
     {
       path: '/',
       name: 'HelloWorld',

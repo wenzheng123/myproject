@@ -11,6 +11,7 @@
    <!--<two></two>-->
     <End></End>
     <router-view></router-view>
+
   </div>
 
 </template>
