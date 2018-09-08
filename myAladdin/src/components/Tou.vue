@@ -13,21 +13,17 @@
       <li><router-link to="/three">美食</router-link></li>
       <li><router-link to="/four">母婴</router-link></li>
     </ul>
-
-  <ul class="end">
-    <li><img src="../../static/img/end1.png" alt=""></li>
-    <li><img src="../../static/img/end2.png" alt=""></li>
-    <li><img src="../../static/img/end5.png" alt=""></li>
-    <li><img src="../../static/img/end4.png" alt=""></li>
-    <li><img src="../../static/img/end3.png" alt=""></li>
-  </ul>
-
+    <zz></zz>
   </div>
 </template>
 
 <script>
+  import End from "@/components/End"
     export default {
         name: "Tou",
+      components:{
+        zz:End,
+      },
 
       methods:{
           sou(){
@@ -41,26 +37,7 @@
 </script>
 
 <style scoped>
-  .end>li:nth-child(3){
-    margin-top: -0.3rem;
-  }
-   .end>li{
-   margin-top: -0.1rem;
-     z-index: 1;
-   }
-  .end{
-    width: 100%;
-    height: 0.98rem;
-    border-top:solid #e6e6e6 ;
-    border-bottom:solid #e6e6e6;
-    z-index: 3;
-    background: #ffffff;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
 
-  }
   /*end*/
 
 /*二*/

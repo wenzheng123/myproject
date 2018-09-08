@@ -178,7 +178,7 @@
   .two{
     position: relative;
     text-align: center;
-    line-height: 0.5rem;
+    line-height: 0.9rem;
   }
   .two input{
     width: 6.8rem;
@@ -193,7 +193,7 @@
   .tz{
     position: absolute;
     left:2rem;
-    top: 0.35rem;
+    top: 0.3rem;
     z-index: 1;
   }
   .one p:nth-child(2){

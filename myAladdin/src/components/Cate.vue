@@ -4,7 +4,6 @@
         <router-link to="/four"><img src="../../static/img/seek1.png" alt=""></router-link>
         <img src="../../static/img/分享.png" alt="" >
         <p>健康美味兼得的布尔本</p>
-
       </div>
       <div class="content">
         <img src="../../static/img/cate1.png" alt="" class="z2">
@@ -51,8 +50,6 @@
 </script>
 
 <style scoped>
-  .clearfix:after { clear:both;content:".";display:block;font-size:0;height:0;visibility:hidden; }
-  .clearfix:after { _zoom:1; }
   .one3_1{
     margin: 0.28rem;
   }

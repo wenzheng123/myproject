@@ -164,8 +164,7 @@
   input::-webkit-input-placeholder{
     color: red;
     text-align: left;
-    line-height: 0.08rem;
-    font-size: 0.1rem;
+
   }
   .tz{
     position: absolute;

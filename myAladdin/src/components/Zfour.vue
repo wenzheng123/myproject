@@ -11,7 +11,7 @@
     <router-link to="/sp"><img src="../../static/img/four1.png" alt=""></router-link>
     <ul class="one4_1">
       <li>
-        <img src="../../static/img/four2.png" alt="">
+        <router-link to="/milk"><img src="../../static/img/four2.png" alt=""></router-link>
         <p>诺优能幼儿配</p>
         <span>¥59</span>
       </li>

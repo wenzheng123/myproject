@@ -2,7 +2,7 @@
   <div class="content">
     <div class="one2">
       <div class="one_1">
-        <img src="../../static/img/g1.png" alt="">
+        <router-link to="/ceas"><img src="../../static/img/g1.png" alt=""></router-link>
       </div>
       <div class="one_2">
         <img src="../../static/img/g2.png" alt="">
@@ -63,12 +63,7 @@
 </script>
 
 <style scoped>
-  .two4_4{
-    width: 2rem;
-    height: 2.9rem;
-    float: left;
-    margin-right: 0.25rem;
-  }
+
    .two4{
      position: relative;
      top: 7rem;
@@ -138,7 +133,7 @@
     text-align: center;
   }
 
-  .one_1>img{
+  .one_1>a>img{
     width: 80%;
     height: 100%;
     position: absolute;

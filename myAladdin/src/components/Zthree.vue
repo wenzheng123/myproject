@@ -6,13 +6,15 @@
      <div class="two2_1">
        热销项目
      </div>
+     <router-link to="/five">
      <div class="two3">
      <div class="two2_2" v-for="item in arr">
      <img :src="item.src" alt="">
      <p>{{item.z}}</p>
      </div>
- </div>
+ </div> </router-link>
    </div>
+
    <div class="two4">
      <hr />
      <div class="two2_1">
