@@ -1,7 +1,9 @@
 <template>
   <div class="box">
    <div class="top">
+     <router-link to="/" class="nav1">
      <img src="../../static/img/tl.png" alt="">
+     </router-link>
      <router-link to="/news"><img src="../../static/img/tr.png" alt="" class="news"></router-link>
      <img src="../../static/img/tz.png" alt="" class="tz">
      <router-link to="/seek"><input  @click = "sou" type="text" placeholder="输入商品关键词"></router-link>
@@ -13,7 +15,10 @@
       <li><router-link to="/three">美食</router-link></li>
       <li><router-link to="/four">母婴</router-link></li>
     </ul>
+<<<<<<< HEAD
     <zz></zz>
+=======
+>>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
   </div>
 </template>
 
@@ -38,7 +43,10 @@
 
 <style scoped>
 
+<<<<<<< HEAD
   /*end*/
+=======
+>>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
 
 /*二*/
 .top_1{
@@ -66,7 +74,7 @@
     position: fixed;
     position: relative;
   }
-  .top>img:nth-child(1){
+  .nav1 img{
      position: absolute;
      left: 0.24rem;
      top: 0.44rem;

@@ -23,30 +23,30 @@
 <script>
     export default {
         name: "Lb",
-      mounted(){
-        var mySwiper = new Swiper('.swiper-container', {
-          //竖直  vertical  水平 horizontal
-          loop:true,
-          direction: 'horizontal',
-          speed: 1000,
-          autoplay: true,
-          // 如果需要分页器
-          pagination: {
-            el: '.swiper-pagination',
-            clickable:true
-          },
+        mounted() {
+          var mySwiper = new Swiper('.swiper-container', {
+            //竖直  vertical  水平 horizontal
+            loop: true,
+            direction: 'horizontal',
+            speed: 1000,
+            autoplay: true,
+            // 如果需要分页器
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            },
 
 
-        })
+          })
+        }
       }
-    }
 </script>
 
 <style scoped>
- .swiper-slide img{
-   width: 100%;
-   height: 100%;
- }
+  .swiper-slide img{
+    width: 100%;
+    height: 100%;
+  }
   .swiper-container {
     width: 98%;
     height: 3rem;

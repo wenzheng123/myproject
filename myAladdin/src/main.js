@@ -4,9 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import $ from 'jquery'
+import VueTouch from 'vue-touch'
 
 Vue.config.productionTip = false
-
+Vue.use(VueTouch, {name: 'v-touch'})
+VueTouch.config.swipe = {
+  threshold: 100 //手指左右滑动距离
+}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
@@ -14,3 +18,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
