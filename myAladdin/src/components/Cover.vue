@@ -1,6 +1,6 @@
 <template>
-  <v-touch v-on:swiperight="swiperright" class="vTouch">
-<div class="Cover" >
+  <v-touch v-on:swiperight="swiperright" class="vTouch" >
+<div class="Cover" @touchmove.prevent>
   <ul class="Cover1" >
     <li >
       <div >

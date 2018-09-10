@@ -1,6 +1,6 @@
 <template>
 
-    <div class="Cover" >
+    <div class="Cover" @touchmove.prevent>
       <ul class="Cover1" >
         <div>
           <span>服务说明</span>
@@ -41,16 +41,16 @@
   .Cover{
     position: fixed;
     top: 0;
-    overflow-y: scroll;
     width: 100%;
     height: 100%;
     font-size: 0.3rem;
+    z-index: 99;
     background-color: rgba(0,0,0,0.3);
   }
   .Cover1{
     color: #333333;
     margin-bottom: 0.5rem;
-    position: absolute;
+    position: fixed;
     bottom: -1rem;
     background-color: #ffffff;
   }

@@ -1,16 +1,21 @@
 <template>
   <div id="app">
+    <GoShop></GoShop>
     <!--用transition 把切换组件页面的容器包含-->
-    <transition name="slide-fade">
-      <router-view/>
-    </transition>
+    <!--<transition name=".slide-fade-enter, .slide-fade-leave-to">-->
+      <!--<router-view/>-->
+    <!--</transition>-->
 
   </div>
 </template>
 
 <script>
+  import GoShop from '@/components/GoShop'
 export default {
   name: 'App',
+  components:{
+    GoShop
+  }
 }
 </script>
 

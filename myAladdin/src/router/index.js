@@ -28,10 +28,45 @@ import Register from '@/components/Register'
 import CutGoods from '@/components/CutGoods'
 import Details from '@/components/Details'
 import DetailsCover from '@/components/DetailsCover'
+import shuishuoming from '@/components/shuishuoming'
+import Goodsname from '@/components/Goodsname'
+import Xinde from '@/components/Xinde'
+import Xinde1 from '@/components/Xinde1'
+import Xinde2 from '@/components/Xinde2'
+import xindeDetial from '@/components/xindeDetial'
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/Xinde',
+      name:'Xinde',
+      component:Xinde,
+      redirect:'/Xinde1',
+      children:[
+        {
+          path:'/Xinde1',
+          name:'Xinde1',
+          component:Xinde1,
+        },
+        {
+          path:'/Xinde2',
+          name:'Xinde2',
+          component:Xinde2,
+        },
+      ]
+    },
+    {
+      path:'/xindeDetial',
+      name:'xindeDetial',
+      component:xindeDetial,
+    },
+    {
+      path:'/Goodsname',
+      name:'Goodsname',
+      component:Goodsname
+    },
     {
       path: '/Details',
       name: 'Details',
@@ -41,6 +76,11 @@ export default new Router({
           path:'/DetailsCover',
           name:'DetailsCover',
           component:DetailsCover
+        },
+        {
+          path:'/shuishuoming',
+          name:'shuishuoming',
+          component:shuishuoming
         }
       ]
     },
