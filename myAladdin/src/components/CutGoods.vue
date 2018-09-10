@@ -56,6 +56,9 @@
     name: "CutGoods",
     components:{
       End
+    },
+    mounted(){
+      $('.one4').not($('.one4').eq(0)).css('margin-top',0.2+'rem')
     }
   }
 </script>
@@ -108,7 +111,7 @@
     color: #666666;
   }
   .one4{
-    margin-top: 0.2rem;
+   clear: both;
     background-color: #ffffff;
   }
 

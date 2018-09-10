@@ -39,6 +39,7 @@ import Eye2 from '@/components/Eye2'
 import CutGoods from '@/components/CutGoods'
 import Details from '@/components/Details'
 import DetailsCover from '@/components/DetailsCover'
+
 import Support from '@/components/Support'
 import Jie from '@/components/Jie'
 import Eye3 from '@/components/Eye3'
@@ -47,10 +48,46 @@ import Kefu1 from '@/components/Kefu1'
 import Kefu2 from '@/components/Kefu2'
 import Kefu3 from '@/components/Kefu3'
 
+import shuishuoming from '@/components/shuishuoming'
+import Goodsname from '@/components/Goodsname'
+import Xinde from '@/components/Xinde'
+import Xinde1 from '@/components/Xinde1'
+import Xinde2 from '@/components/Xinde2'
+import xindeDetial from '@/components/xindeDetial'
+
+
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/Xinde',
+      name:'Xinde',
+      component:Xinde,
+      redirect:'/Xinde1',
+      children:[
+        {
+          path:'/Xinde1',
+          name:'Xinde1',
+          component:Xinde1,
+        },
+        {
+          path:'/Xinde2',
+          name:'Xinde2',
+          component:Xinde2,
+        },
+      ]
+    },
+    {
+      path:'/xindeDetial',
+      name:'xindeDetial',
+      component:xindeDetial,
+    },
+    {
+      path:'/Goodsname',
+      name:'Goodsname',
+      component:Goodsname
+    },
     {
       path: '/Details',
       name: 'Details',
@@ -60,6 +97,11 @@ export default new Router({
           path:'/DetailsCover',
           name:'DetailsCover',
           component:DetailsCover
+        },
+        {
+          path:'/shuishuoming',
+          name:'shuishuoming',
+          component:shuishuoming
         }
       ]
     },
@@ -144,6 +186,7 @@ export default new Router({
     },
     // 单独
     {
+
       path:"/kefu3",
       name:"Kefu3",
       component:Kefu3
@@ -179,6 +222,7 @@ export default new Router({
       component:Jie
     },
     {
+
       path:"/eye",
       name:"Eye",
       component:Eye
@@ -218,6 +262,7 @@ export default new Router({
     },
 
     {
+
 
       path:"/milk",
       name:"Milk",
@@ -268,8 +313,14 @@ export default new Router({
 
     // 我的
     {
+
       path: '/person',
       name: 'PersonalCenter',
+
+      path:'/person',
+      name:'PersonalCenter',
+
+
       component: PersonalCenter,
       children: [
         {

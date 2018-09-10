@@ -40,7 +40,9 @@
         </div>
         <div>
           <span>关税 : ¥ 10</span>&nbsp;
+          <router-link to="/shuishuoming">
           <img src="../../static/img/detail.png" alt="">
+          </router-link>
         </div>
         <div>
         <p>邮费 : ¥ 50</p>
@@ -79,7 +81,7 @@
           <span>阿拉粉心得</span>
         </li>
         <li>
-          <span>查看更多</span>
+          <span><router-link to="/Xinde">查看更多</router-link></span>
           <img src="../../static/img/zuoArrow.png" alt="">
         </li>
       </ul>
@@ -96,6 +98,7 @@
       <ul class="cost4">
         <li class="cost5">
           <div>
+            <router-link to="/Goodsname">
             <div>
             <p>品牌<br/>介绍</p>
               <div>
@@ -109,6 +112,7 @@
               </div>
             </div>
             <p>+关注</p>
+            </router-link>
           </div>
           <div>品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌 介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌</div>
         </li>
@@ -411,16 +415,16 @@
     font-size: 0.2rem;
     margin: 0.2rem 0;
   }
-  .cost5>div:nth-of-type(1){
+  .cost5>div:nth-of-type(1)>a{
     padding: 0.2rem;
     display: flex;
     justify-content: space-between;
   }
-  .cost5>div:nth-of-type(1)>div{
+  .cost5>div:nth-of-type(1)>a>div{
     display: flex;
     justify-content: space-between;
   }
-  .cost5>div:nth-of-type(1)>div>p{
+  .cost5>div:nth-of-type(1)>a>div>p{
     width: 0.6rem;
     height: 0.6rem;
     margin: 0 0.1rem;
@@ -429,7 +433,7 @@
     line-height: 0.3rem;
     word-wrap: break-word;
   }
-  .cost5>div:nth-of-type(1)>p{
+  .cost5>div:nth-of-type(1)>a>p{
     width: 1rem;
     height: 0.3rem;
     font-size: 0.25rem;

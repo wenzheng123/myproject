@@ -1,6 +1,6 @@
 <template>
-  <v-touch v-on:swiperight="swiperright" style="touch-action: pan-y!important;" class="vTouch">
-  <div class="ClassTo" >
+  <v-touch @touchmove.prevent v-on:swiperight="swiperright" style="touch-action: pan-y!important;" class="vTouch">
+  <div class="ClassTo" @touchmove.prevent>
     <ul class="ClassTo1" >
       <div class="cNav">
         <img src="../../static/img/Arrow1.png" alt="">
@@ -75,7 +75,8 @@
         }
       }
     },
-
+ mounted(){
+ }
 
   }
 </script>
@@ -86,30 +87,29 @@
   }
   .ClassTo{
     color: #4d4d4d;
-    overflow-y: scroll;
-    width: 100%;
+    overflow: scroll;
     height: 100%;
+    width: 100%;
     font-size: 0.3rem;
-    position: absolute;
+    position: fixed;
     top: 0;
     background-color: rgba(0,0,0,0.3);
   }
   .ClassTo1{
     width: 5.6rem;
-    height: 100%;
     float: right;
-    overflow: hidden;
     background-color: white;
   }
   .cNav{
+    width: 72.5%;
     height: 0.7rem;
     display: flex;
     padding: 0.2rem;
     background-color: #f2f2f2;
     text-align: center;
-    line-height: 1.1rem;
+    line-height: 0.7rem;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
     font-size: 0.36rem;
   }
   .cNav img{
@@ -122,6 +122,9 @@
   }
   .sure{
     font-size: 0.3rem;
+  }
+  .ClassTo1>li:nth-of-type(1){
+    margin-top: 1.1rem;
   }
   .ClassTo1>li{
     height: 0.61rem;

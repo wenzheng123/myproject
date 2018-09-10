@@ -26,8 +26,12 @@
   .end>li:nth-child(3){
     margin-top: 0.2rem;
   }
+
   .end>li{
     margin-top:0.2rem;
+
+    z-index: 1;
+
   }
   .end{
     width: 100%;
