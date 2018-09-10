@@ -25,6 +25,10 @@
 
 <style scoped>
   .end>li:nth-child(3){
+    margin-top: 0.2rem;
+  }
+  .end>li{
+
     margin-top: -0.3rem;
   }
   .end>li{
@@ -39,7 +43,6 @@
     z-index: 3;
     background: #ffffff;
     position: fixed;
-    z-index: 99;
     bottom: 0;
     display: flex;
     justify-content: space-around;

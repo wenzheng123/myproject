@@ -23,10 +23,10 @@
         <img src="../../static/img/two2.png" alt=""> 今日推荐</span>
       </div>
       <div class="one4">
-        <img src="../../static/img/two3.png" alt="">
+        <router-link to="/eye"><img src="../../static/img/two3.png" alt=""></router-link>
         <ul class="one4_1">
           <li>
-            <img src="../../static/img/two4.png" alt="">
+            <router-link to="/eye2"> <img src="../../static/img/two4.png" alt=""></router-link>
             <p>不易脱妆口红</p>
             <span>¥59</span>
           </li>
@@ -44,10 +44,10 @@
       </div>
       <!--二-->
       <div class="one4">
-        <img src="../../static/img/two3.png" alt="">
+        <router-link to="/eye"><img src="../../static/img/two3.png" alt=""></router-link>
         <ul class="one4_1">
           <li>
-            <img src="../../static/img/two4.png" alt="">
+           <router-link to="/eye2"> <img src="../../static/img/two4.png" alt=""></router-link>
             <p>不易脱妆口红</p>
             <span>¥59</span>
           </li>
@@ -81,6 +81,7 @@
   .one4_1 li{
     width: 2.24rem;
     height: 2.45rem;
+    margin-top: 0.2rem;
     border-right: solid #cccc;
   }
   .one4_1>li>span{
@@ -95,7 +96,7 @@
     text-align: center;
 
   }
-  .one4>img:nth-child(1){
+  .one4>a>img{
     width: 100%;
     height: 100%;
   }

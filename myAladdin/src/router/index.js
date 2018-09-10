@@ -25,6 +25,16 @@ import Login1 from '@/components/Login1'
 import Login2 from '@/components/Login2'
 import Login3 from '@/components/Login3'
 import Register from '@/components/Register'
+import Milk from '@/components/Milk'
+import Perfume from '@/components/Perfume'
+import Zfive from '@/components/Zfive'
+import Share from '@/components/Share'
+import Ceas from '@/components/Ceas'
+import Ceas2 from '@/components/Ceas2'
+import Eye from '@/components/Eye'
+import Skin from '@/components/Skin'
+import Eye1 from '@/components/Eye1'
+import Eye2 from '@/components/Eye2'
 import CutGoods from '@/components/CutGoods'
 import Details from '@/components/Details'
 import DetailsCover from '@/components/DetailsCover'
@@ -115,6 +125,7 @@ export default new Router({
           name:'Zfour',
           component:Zfour
         },
+
         {
         path:'/Sort',
         name:'Sort',
@@ -159,7 +170,14 @@ export default new Router({
           name: 'ClassTo',
           component: ClassTo,
         },
+
       ]
+    },
+    // 单独
+    {
+      path:"/eye",
+      name:"Eye",
+      component:Eye
     },
     {
       path:"/seek",
@@ -188,8 +206,58 @@ export default new Router({
     },
 
     {
-      path: '/person',
-      name: 'PersonalCenter',
+      path:"/milk",
+      name:"Milk",
+      component:Milk
+    },
+    {
+      path:'/me',
+      name:'Perfume',
+      component:Perfume
+    },
+    {
+      path:"/skin",
+      name:"Skin",
+      component:Skin
+    },
+    {
+      path:'/five',
+      name:'Zfive',
+      component:Zfive,
+      children:[
+        {
+          path:'/share',
+          name:'Share',
+          component:Share
+        },
+      ]
+    },
+    {
+      path:'/ceas',
+      name:'Ceas',
+      component:Ceas,
+    },
+    {
+      path:'/ceas2',
+      name:'Ceas2',
+      component:Ceas2,
+    },
+    {
+      path:'/eye1',
+      name:'Eye1',
+      component:Eye1,
+    },
+    {
+      path:'/eye2',
+      name:'Eye2',
+      component:Eye2,
+    },
+
+    // 我的
+    {
+      path:'/person',
+      name:'PersonalCenter',
+
       component: PersonalCenter,
       children: [
         {

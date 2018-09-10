@@ -2,12 +2,14 @@
 <div class="content">
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="../../static/img/l1.png" alt="">
+      <div class="swiper-slide"><router-link to="me">
+        <img src="../../static/img/l1.png" alt=""></router-link>
       </div>
       <div class="swiper-slide"><router-link to="/cate"><img src="../../static/img/l2.png" alt=""> </router-link></div>
 
-      <div class="swiper-slide"><img src="../../static/img/l3.png" alt=""></div>
+      <div class="swiper-slide"><img src="../../static/img/l3.png" alt="">
+      </div>
+
     </div>
 
     <div class="swiper-pagination" ></div>
