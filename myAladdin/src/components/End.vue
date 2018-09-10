@@ -27,12 +27,9 @@
   .end>li:nth-child(3){
     margin-top: 0.2rem;
   }
-  .end>li{
 
-    margin-top: -0.3rem;
-  }
   .end>li{
-    margin-top: -0.1rem;
+    margin-top: 0.15rem;
     z-index: 1;
   }
   .end{

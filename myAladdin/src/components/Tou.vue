@@ -15,10 +15,8 @@
       <li><router-link to="/three">美食</router-link></li>
       <li><router-link to="/four">母婴</router-link></li>
     </ul>
-<<<<<<< HEAD
     <zz></zz>
-=======
->>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
+
   </div>
 </template>
 
@@ -42,12 +40,6 @@
 </script>
 
 <style scoped>
-
-<<<<<<< HEAD
-  /*end*/
-=======
->>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
-
 /*二*/
 .top_1{
   width: 100%;

@@ -91,7 +91,7 @@
     height: 100%;
     width: 100%;
     font-size: 0.3rem;
-    position: relative;
+    position: fixed;
     top: 0;
     background-color: rgba(0,0,0,0.3);
   }
@@ -101,15 +101,15 @@
     background-color: white;
   }
   .cNav{
-    width: 100%;
+    width: 72.5%;
     height: 0.7rem;
     display: flex;
     padding: 0.2rem;
     background-color: #f2f2f2;
     text-align: center;
-    line-height: 1.1rem;
+    line-height: 0.7rem;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
     font-size: 0.36rem;
   }
   .cNav img{
