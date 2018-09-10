@@ -53,11 +53,4 @@
     margin: 0 auto;
     overflow: hidden;
   }
-
-  .swiper-slide {
-    color: blueviolet;
-    font-size: 40px;
-    text-align: center;
-    line-height: 300px;
-  }
 </style>

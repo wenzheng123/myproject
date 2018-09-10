@@ -15,6 +15,7 @@ import Ztwo from "@/components/Ztwo"
 import Zthree from "@/components/Zthree"
 import Zfour from "@/components/Zfour"
 import Seek from "@/components/Seek"
+import Seekx1 from '@/components/Seekx1'
 import Monitor from "@/components/Monitor"
 import News from "@/components/News"
 import Sp from "@/components/Sp"
@@ -25,7 +26,6 @@ import Login1 from '@/components/Login1'
 import Login2 from '@/components/Login2'
 import Login3 from '@/components/Login3'
 import Register from '@/components/Register'
-<<<<<<< HEAD
 import Milk from '@/components/Milk'
 import Perfume from '@/components/Perfume'
 import Zfive from '@/components/Zfive'
@@ -36,11 +36,17 @@ import Eye from '@/components/Eye'
 import Skin from '@/components/Skin'
 import Eye1 from '@/components/Eye1'
 import Eye2 from '@/components/Eye2'
-=======
 import CutGoods from '@/components/CutGoods'
 import Details from '@/components/Details'
 import DetailsCover from '@/components/DetailsCover'
->>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
+import Support from '@/components/Support'
+import Jie from '@/components/Jie'
+import Eye3 from '@/components/Eye3'
+import Kefu from '@/components/Kefu'
+import Kefu1 from '@/components/Kefu1'
+import Kefu2 from '@/components/Kefu2'
+import Kefu3 from '@/components/Kefu3'
+
 Vue.use(Router)
 
 export default new Router({
@@ -88,9 +94,7 @@ export default new Router({
           name:'Zfour',
           component:Zfour
         },
-<<<<<<< HEAD
 
-=======
         {
         path:'/Sort',
         name:'Sort',
@@ -135,23 +139,62 @@ export default new Router({
           name: 'ClassTo',
           component: ClassTo,
         },
->>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
+
       ]
     },
     // 单独
     {
-<<<<<<< HEAD
+      path:"/kefu3",
+      name:"Kefu3",
+      component:Kefu3
+    },
+    {
+      path:"/kefu2",
+      name:"Kefu2",
+      component:Kefu2
+    },
+    {
+      path:"/kefu1",
+      name:"Kefu1",
+      component:Kefu1
+    },
+    {
+      path:"/kefu",
+      name:"Kefu",
+      component:Kefu
+    },
+    {
+      path:"/support",
+      name:"Support",
+      component:Support
+    },
+    {
+      path:"/eye3",
+      name:"Eye3",
+      component:Eye3
+    },
+    {
+      path:"/jie",
+      name:"Jie",
+      component:Jie
+    },
+    {
       path:"/eye",
       name:"Eye",
       component:Eye
     },
-
     {
-=======
->>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
       path:"/seek",
       name:"Seek",
-      component:Seek
+      component:Seek,
+      redirect:"/Seekx1",
+      children:[
+        {
+          path:"/Seekx1",
+          name:"Seekx1",
+          component:Seekx1
+        },
+      ]
     },
     {
       path:"/mo",
@@ -175,7 +218,7 @@ export default new Router({
     },
 
     {
-<<<<<<< HEAD
+
       path:"/milk",
       name:"Milk",
       component:Milk
@@ -225,12 +268,8 @@ export default new Router({
 
     // 我的
     {
-      path:'/person',
-      name:'PersonalCenter',
-=======
       path: '/person',
       name: 'PersonalCenter',
->>>>>>> 94f673cfe78c6aab779dcbd1ee8969ba4d7e48a7
       component: PersonalCenter,
       children: [
         {

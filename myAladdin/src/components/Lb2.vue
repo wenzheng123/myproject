@@ -5,18 +5,18 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <router-link to="###">
-            <img src="../../static/img/chencai.png" alt="">
+            <img src="../../static/img/two4.png" alt="">
           </router-link>
         </div>
         <div class="swiper-slide">
           <router-link to="###">
-            <img src="../../static/img/chencai.png" alt="">
+            <img src="../../static/img/two4.png" alt="">
           </router-link>
         </div>
 
         <div class="swiper-slide">
           <router-link to="###">
-            <img src="../../static/img/chencai.png" alt="">
+            <img src="../../static/img/two4.png" alt="">
           </router-link>
         </div>
       </div>
@@ -47,6 +47,9 @@
 </script>
 
 <style lang="less">
+  .swiper-container a img{
+    height: 2.5rem;
+  }
   .swiper-container {
     width: 100%;
     height: 3.5rem;

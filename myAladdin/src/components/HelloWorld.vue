@@ -3,7 +3,7 @@
     <aa></aa>
     <!--<news></news>-->
     <!--<mo></mo>-->
-    <!--<seek></seek>-->
+    <!--<seek1></seek1>-->
     <!--<bb></bb>-->
     <!--<four></four>-->
     <!--<three></three>-->
@@ -27,6 +27,8 @@
   import Seek from "@/components/Seek"
   import Monitor from "@/components/Monitor"
   import News from "@/components/News"
+  import Seekx1 from "@/components/Seekx1"
+
 export default {
   name: 'HelloWorld',
   data () {
@@ -43,6 +45,7 @@ export default {
     three:Zthree,
     four:Zfour,
     seek:Seek,
+    seek1:Seekx1,
     mo:Monitor,
     news:News
 

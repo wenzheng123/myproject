@@ -89,6 +89,7 @@
     height: 3.1rem;
     font-size: 0.25rem;
     display: flex;
+    margin-top: 0.2rem;
     justify-content: space-between;
     text-align: center;
 

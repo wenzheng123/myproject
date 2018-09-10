@@ -23,7 +23,9 @@
         <img src="../../static/img/two2.png" alt=""> 今日推荐</span>
       </div>
       <div class="one4">
-        <router-link to="/eye"><img src="../../static/img/two3.png" alt=""></router-link>
+        <router-link to="/eye">
+          <img src="../../static/img/two3.png" alt="">
+        </router-link>
         <ul class="one4_1">
           <li>
             <router-link to="/eye2"> <img src="../../static/img/two4.png" alt=""></router-link>
