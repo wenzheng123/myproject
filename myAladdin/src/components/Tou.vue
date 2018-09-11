@@ -32,7 +32,9 @@
             var tz = document.getElementsByClassName("tz")
             console.log(tz)
            tz[0].style.display = "none"
-          }
+          },
+
+
       },
 
     }

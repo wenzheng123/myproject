@@ -2,7 +2,7 @@
   <div class="content">
     <p>亲们都在找</p>
     <ul class="one">
-      <li  v-for="item in arr"><span>{{item}}</span></li>
+      <li @click = "chuan(index)"  v-for="(item,index) in arr"><span>{{item}}</span></li>
 
     </ul>
   </div>
@@ -16,6 +16,12 @@
             arr:[
               "面膜","防嗮","眼霜","精华","洗面奶","资生堂","洗发水","防嗮喷雾","洗面奶","资生堂","洗发水","防嗮喷雾"
             ],
+          }
+      },
+      methods:{
+          chuan(index){
+            console.log(11)
+            this.$emit("change-name",this.arr[index])
           }
       }
     }

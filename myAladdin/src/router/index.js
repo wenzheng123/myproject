@@ -16,6 +16,7 @@ import Zthree from "@/components/Zthree"
 import Zfour from "@/components/Zfour"
 import Seek from "@/components/Seek"
 import Seekx1 from '@/components/Seekx1'
+import Seekx2 from '@/components/Seekx2'
 import Monitor from "@/components/Monitor"
 import News from "@/components/News"
 import Sp from "@/components/Sp"
@@ -253,6 +254,11 @@ export default new Router({
           path:"/Seekx1",
           name:"Seekx1",
           component:Seekx1
+        },
+        {
+          path:"/Seekx2",
+          name:"Seekx2",
+          component:Seekx2
         },
       ]
     },
