@@ -56,6 +56,7 @@ import xindeDetial from '@/components/xindeDetial'
 import GoShop from '@/components/GoShop'
 import Fabiaoxd from '@/components/Fabiaoxd'
 import lianlian from '@/components/lianlian'
+import Liangxi from '@/components/Liangxi'
 Vue.use(Router)
 
 export default new Router({
@@ -65,6 +66,11 @@ export default new Router({
       path:'/lianlian',
       name:'lianlian',
       component:lianlian,
+    },
+    {
+      path:'/lian',
+      name:'Liangxi',
+      component:Liangxi,
     },
     {
       path:'/Xinde',

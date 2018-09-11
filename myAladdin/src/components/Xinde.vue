@@ -8,12 +8,12 @@
     <p> 阿拉粉心得</p>
   </div>
     <ul class="top1">
-       <router-link :to="'/xinde'+(index+1)" v-for="(item,index) in nav" :class="{color:changeC==index}">
+       <!--<router-link :to="'/Xinde'+(index+1)" v-for="(item,index) in nav" :class="{color:changeC==index}">-->
         <li  @click="change(index)">
         {{item}}
         <img src="../../static/img/tiao.png" alt="" :class="{show:changeC==index}">
       </li>
-      </router-link> |
+      <!--</router-link>-->
     </ul>
   </div>
 <router-view></router-view>
