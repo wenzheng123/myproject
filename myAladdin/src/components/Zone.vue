@@ -70,12 +70,13 @@
 </template>
 
 <script>
+
   import  Lb from '@/components/Lb'
     export default {
         name: "Zone",
       components:{
           cc:Lb
-      }
+      },
     }
 </script>
 

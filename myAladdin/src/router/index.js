@@ -39,7 +39,6 @@ import Eye2 from '@/components/Eye2'
 import CutGoods from '@/components/CutGoods'
 import Details from '@/components/Details'
 import DetailsCover from '@/components/DetailsCover'
-
 import Support from '@/components/Support'
 import Jie from '@/components/Jie'
 import Eye3 from '@/components/Eye3'
@@ -47,19 +46,25 @@ import Kefu from '@/components/Kefu'
 import Kefu1 from '@/components/Kefu1'
 import Kefu2 from '@/components/Kefu2'
 import Kefu3 from '@/components/Kefu3'
-
 import shuishuoming from '@/components/shuishuoming'
 import Goodsname from '@/components/Goodsname'
 import Xinde from '@/components/Xinde'
 import Xinde1 from '@/components/Xinde1'
 import Xinde2 from '@/components/Xinde2'
 import xindeDetial from '@/components/xindeDetial'
-
-
+import GoShop from '@/components/GoShop'
+import Fabiaoxd from '@/components/Fabiaoxd'
+import lianlian from '@/components/lianlian'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    //wanwan
+    {
+      path:'/lianlian',
+      name:'lianlian',
+      component:lianlian,
+    },
     {
       path:'/Xinde',
       name:'Xinde',
@@ -184,7 +189,18 @@ export default new Router({
 
       ]
     },
+
     // 单独
+    {
+      path:"/Fabiaoxd",
+      name:"Fabiaoxd",
+      component:Fabiaoxd
+    },
+    {
+      path:"/GoShop",
+      name:"GoShop",
+      component:GoShop
+    },
     {
 
       path:"/kefu3",
@@ -316,11 +332,6 @@ export default new Router({
 
       path: '/person',
       name: 'PersonalCenter',
-
-      path:'/person',
-      name:'PersonalCenter',
-
-
       component: PersonalCenter,
       children: [
         {

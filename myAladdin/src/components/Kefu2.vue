@@ -26,7 +26,11 @@
 
               <div class="one_4">
                 <p>
-               <span>发表心得</span>
+               <span>
+               <router-link to="Fabiaoxd" style="color:#ffffff">
+               发表心得
+               </router-link>
+               </span>
                 <span>退货退款</span></p>
               </div>
             </div>

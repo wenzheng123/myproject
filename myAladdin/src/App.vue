@@ -1,24 +1,31 @@
 <template>
   <div id="app">
-    <!--<GoShop></GoShop>-->
-    <!--<GoShop></GoShop>-->
     <!--用transition 把切换组件页面的容器包含-->
-    <!--<transition name=".slide-fade-enter, .slide-fade-leave-to">-->
-      <!--<router-view/>-->
     <transition name=".slide-fade-enter, .slide-fade-leave-to">
       <router-view/>
     </transition>
-
   </div>
 </template>
 
 <script>
-  import GoShop from '@/components/GoShop'
+  import axios from "axios";
+import Adata from '@/components/Adata'
 export default {
   name: 'App',
   components:{
-    GoShop
-  }
+    Adata,
+  },
+  data(){
+    return{
+      users: []//预先创建一个数组，用于存放请求得到的数据
+    }
+  },
+  // created(){ //此处用created相当于对前端页面数据进行初始化
+  //   axios.get("/api/PHP/myaladdin.php").then(res=>{  //这里是ES6的写法，get请求的地址，是小编自己在网站上存放的php文件，后面将介绍其编写，也可以自己定义
+  //     this.users=res.data;//获取数据
+  //     console.log(this.users);
+  //   })
+  // },
 }
 </script>
 

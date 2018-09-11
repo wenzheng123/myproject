@@ -14,7 +14,7 @@
         <img src="../../static/img/fly.png" alt="">
         <span>日本直邮</span>
       </div>
-      <li class="con2" v-for="(i,index) in 2">
+      <li class="con2 conn2" v-for="(i,index) in 2">
         <img src="../../static/img/dui1.png" alt="" class="d1">
         <div class="con2_1">
           <img src="../../static/img/huafen.png" alt="" class="hf1">
@@ -32,18 +32,26 @@
       </li>
       <div class="con3">
         商品金额
-        <p class="fontC">￥332.12</p>
+
+        <p class="fontC">￥{{(166.06*this.num[0]+166.06*this.num[1]).toFixed(2)}}</p>
       </div>
       <div class="con3">
         综合税总额
-        <p class="fontC">￥0.33</p>
+        <p class="fontC">￥{{(0.11*this.num[0]+0.11*this.num[1]).toFixed(2)}}</p>
       </div>
       <div class="con3">
         应付总金额
-        <p class="fontC">￥166.39</p>
+        <p class="fontC">￥{{this.end=((166.06*this.num[0]+166.06*this.num[1]).toFixed(2)/1+(0.11*this.num[0]+0.11*this.num[1]).toFixed(2)/1).toFixed(2)}}</p>
       </div>
       <div class="con3">
-        <p class="count">结算 (2)</p>
+        <p class="count">
+          <router-link style="color: #ffffff" :to="{
+        path:'/Support',
+        query:{end:end}
+        }">
+          结算 ({{this.num.length}})
+          </router-link>
+        </p>
       </div>
     </ul>
     <ul class="conn" >
@@ -52,7 +60,7 @@
         <img src="../../static/img/fly.png" alt="">
         <span>韩国直邮</span>
       </div>
-      <li class="con2" v-for="item1 in data1[0]">
+      <li class="con2" v-for="item1 in data1">
         <img src="../../static/img/dui1.png" alt="" class="d1">
         <div class="con2_1">
           <img :src="item1.url" alt="" class="hf1">
@@ -70,15 +78,15 @@
     </li>
       <div class="con3">
         商品金额
-        <p class="fontC">￥332.12</p>
+        <p class="fontC">￥{{(this.data1[0].pric*this.num1).toFixed(2)}}</p>
       </div>
       <div class="con3">
         综合税总额
-        <p class="fontC">￥0.33</p>
+        <p class="fontC">￥{{0.11*this.num1}}</p>
       </div>
       <div class="con3">
         应付总金额
-        <p class="fontC">￥166.39</p>
+        <p class="fontC">￥{{(this.data1[0].pric*this.num1+0.11*this.num1).toFixed(2)}}</p>
       </div>
       <div class="con3">
         <p class="count">结算 (1)</p>
@@ -102,20 +110,18 @@
         </div>
       </div>
       <div class="con4_3">
-        <p>清除失效商店</p>
+        <p @click="qingchu()">清除失效商店</p>
       </div>
     </div>
     <div class="con5">
       <p>-猜你喜欢-</p>
       <ul v-for="i in 2">
-      <li class="con5_0" v-for="i in 4">
+      <li class="con5_0" v-for="item2 in data2">
         <div class="con5_1">
-        <img src="../../static/img/Lipstick.png" alt="">
-
+        <img :src="item2.url" alt="">
         </div>
-        <p>不易脱妆口红</p>
-
-        <p class="fontC">¥59</p>
+        <p>{{item2.name}}</p>
+        <p class="fontC">¥{{item2.price}}</p>
       </li>
       </ul>
       <p class="con5_2">加载更多</p>
@@ -125,7 +131,6 @@
 </template>
 
 <script>
-  import axios from "axios";
   export default {
     name: "GoShop",
     data(){
@@ -133,11 +138,22 @@
         num:[1,1],
         num1:1,
         data1:[
-          [{con:'会呼吸丝滑蜜粉',spec:'规格：蜜粉',pric:166.06,num:1,url:'../../static/img/huafen.png'}]
-        ]
+          {con:'会呼吸丝滑蜜粉',spec:'规格：蜜粉',pric:166.06,url:'../../static/img/huafen.png'}
+        ],
+        data2:[
+          {url:'../../static/img/kouhong111.png',name:'不易脱妆口红',price:59},
+          {url:'../../static/img/chencai11.png',name:'花蕊唇彩',price:129},
+          {url:'../../static/img/kouhong11.png',name:'娇吻玉口红',price:88},
+          {url:'../../static/img/chencai111.png',name:'丰唇蜜口红',price:99}
+        ],
+        end:'',
+        job:[]
       }
     },
     methods:{
+      qingchu(){
+        $('.con4').remove()
+      },
       add(index){
         if(index==0){
          var nn = ++this.num[index]
@@ -151,12 +167,16 @@
         var nn = --this.num[index]
         if(nn<=0){
           nn = 0
+          // console.log(index)
+          // this.num.splice(index,1)
+          // $('.conn2').eq(index).remove()
         }
         if(index==0){
           this.$set(this.num,index,nn)
         }else if(index==1){
           this.$set(this.num,index,nn)
         }
+
       },
       add1(){
         ++this.num1
@@ -194,6 +214,7 @@
     background-color: #ffffff;
   }
   .con5_1>img{
+    padding:0  0.5rem;
     height: 1.5rem;
     border-right: 1px solid #666666;
     display: inline-block;

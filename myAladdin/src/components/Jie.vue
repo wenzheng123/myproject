@@ -17,14 +17,14 @@
     <div class="one2">
       <p>使用第三方支付平台：</p>
     </div>
-    <div class="one3" v-for="item in arr">
+    <div class="one3" v-for="(item,index) in arr">
       <img :src="item.img" alt="">
       <p>{{item.z1}}</p>
-      <img src="../../static/img/jiea.png" alt="">
+      <img class="simg" @click="select(index)" src="../../static/img/jiea.png"  alt="">
     </div>
     <div class="one4">
       <span>收起</span>
-      <img src="../../static/img/jie3.png" alt="">
+      <img src="../../static/img/jie3.png" alt="" >
     </div>
     <div class="one5">
        确认支付
@@ -35,14 +35,20 @@
 
 <script>
     export default {
-        name: "Jie",
-      data(){
-          return{
-            arr:[
-              {img:"../../static/img/jie.png",z1:"支付宝支付"},
-              {img:"../../static/img/jie1.png",z1:"微信支付"},
-            ]
-          }
+      name: "Jie",
+      data() {
+        return {
+          arr: [
+            {img: "../../static/img/jie.png", z1: "支付宝支付"},
+            {img: "../../static/img/jie1.png", z1: "微信支付"},
+          ],
+        }
+      },
+      methods: {
+        select(index) {
+          $('.simg').eq(index).attr('src','../../static/img/jieh.png')
+          $('.simg').not( $('.simg').eq(index)).attr('src','../../static/img/jiea.png')
+        }
       }
     }
 </script>

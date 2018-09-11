@@ -12,7 +12,13 @@
       </router-link>
     </li>
     <li><img src="../../static/img/end4.png" alt=""></li>
-    <li><img src="../../static/img/end3.png" alt=""></li>
+
+    <li>
+      <router-link to="/GoShop">
+      <img src="../../static/img/end3.png" alt="">
+      </router-link>
+    </li>
+
   </ul>
 </template>
 
@@ -26,12 +32,9 @@
   .end>li:nth-child(3){
     margin-top: 0.2rem;
   }
-
   .end>li{
     margin-top:0.2rem;
-
     z-index: 1;
-
   }
   .end{
     width: 100%;

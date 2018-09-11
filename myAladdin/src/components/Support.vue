@@ -1,7 +1,9 @@
 <template>
     <div>
        <div class="top">
+         <router-link to="/GoShop">
          <img src="../../static/img/seek1.png" alt="">
+         </router-link>
          <span>确认订单</span>
        </div>
       <div class="content">
@@ -36,7 +38,7 @@
           <p class="tz1">显示另外1件（共2件）<img src="../../static/img/购物车6.png" alt=""> </p>
         </div>
         <div class="one3">
-          <p v-for="item in obj"> &nbsp; {{item.z1}} <span>{{item.z2}}&nbsp;&nbsp;</span></p>
+          <p v-for="item in obj"> &nbsp; {{item.z1}} <span>¥{{item.z2}}&nbsp;&nbsp;</span></p>
         </div>
         <div class="one3_1">
          <span>安全提示:</span><span>付款成功后，阿拉灯不会以付款异常、卡单、系统
@@ -47,12 +49,17 @@
         配送方式:
       </div>
         <div class="one4">
-          <span>共2件商品</span> <p> 应付：<span>￥392.12</span></p>
+          <span>共2件商品</span> <p> 应付：<span>￥{{end}}</span></p>
         </div>
         <div class="one5">
           <img src="../../static/img/购物车7.png" alt="">
           <span>本人同意并接受 <strong>《个人委托协议》</strong>和<strong>《用户协议》</strong></span>
-          <p>确认</p>
+            <router-link to="/Jie">
+              <p>
+            确认
+              </p>
+            </router-link>
+
         </div>
       </div>
     </div>
@@ -63,16 +70,19 @@
         name: "Support",
       data(){
           return{
+            end:'',
             obj:[
-              {z1:"商品金额：",z2:"￥332.12"},
-              {z1:"订单邮费：",z2:"￥50.00"},
-              {z1:"关税：",z2:"￥10"},
-              {z1:"订单金额：",z2:"￥392.12"},
+              {z1:"商品金额：",z2:""},
+              {z1:"订单邮费：",z2:50.00},
+              {z1:"关税：",z2:10},
+              {z1:"订单金额：",z2:""},
             ]
           }
       },
       mounted(){
-
+        this.obj[0].z2 = this.$route.query.end
+        this.obj[3].z2 = (this.obj[0].z2/1+this.obj[1].z2/1+this.obj[2].z2/1)
+        this.end = this.obj[3].z2
       },
       methods:{
           fen(){
@@ -80,7 +90,6 @@
             $(".one").css("height","1.8rem")
             $(".one1_1 ,.one_1").css("display","block")
           },
-
       },
       filters:{
       phoneNum(val){
@@ -91,7 +100,8 @@
         }
         return num;
       }
-        }
+        },
+
     }
 </script>
 

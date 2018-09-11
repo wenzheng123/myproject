@@ -33,7 +33,7 @@
           this.users=res.data;//获取数据
           console.log(this.users);
         })
-      }
+      },
     }
 </script>
 
