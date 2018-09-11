@@ -8,11 +8,13 @@
     <p>绚丽女装</p>
   </div>
   <div class="content">
-    <router-link to="/eye1"><img src="../../static/img/two3.png" alt="" class="tz"></router-link>
+    <router-link to="/eye1">
+      <img src="../../static/img/two3.png" alt="" class="tz">
+    </router-link>
     <div class="one">
-      <div class="one1 clearfix">
-        <div class="one_1" v-for="item in arr">
-          <span>{{item.z1}}</span><span>{{item.z2}}</span>
+      <div  class="one1 clearfix">
+        <div class="one_1" v-for="(item,index) in arr">
+          <span @click="se(index)" :class="{red:changeC==index}">{{item.z1}}</span><span>{{item.z2}}</span>
         </div>
       </div>
       <div class="one0" v-for="i in 2">
@@ -36,6 +38,7 @@
 </template>
 
 <script>
+  import axios from "axios"
     export default {
         name: "Eye",
       data(){
@@ -45,9 +48,27 @@
               {z1:"随身面膜",z2:"|"},
               {z1:"分装瓶",z2:"|"},
               {z1:"化妆水",z2:"^"},
-            ]
+            ],
+            obj: [],//预先创建一个数组，用于存放请求得到的数据
+          changeC:-1
           }
       },
+      methods:{
+        cFun(aa){
+          var params = new URLSearchParams();
+          params.append('name', aa);
+          axios.post('localhost',params).then(function (res){
+            this.obj = res.data[0];
+            Bus.$emit('aa', this.obj);
+          }.bind(this));
+        },
+        se(index){
+          this.changeC = index
+        console.log(1)
+        }
+      },
+
+
       mounted(){
           $(".one0").not($(".one0").eq(1)).css("margin-top",0.2+"rem")
       }
@@ -55,6 +76,9 @@
 </script>
 
 <style scoped>
+  .red {
+    color: #f00;
+  }
   .one3_1 img{
     width: 100%;
     height: 60%;

@@ -25,7 +25,6 @@
         name: "Share",
      data(){
           return{
-
             obj:[
               {img:"../../static/img/share1.png", z1:"微信朋友圈"},
               {img:"../../static/img/share2.png", z1:"微信好友"},
