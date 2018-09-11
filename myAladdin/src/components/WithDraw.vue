@@ -2,7 +2,7 @@
     <div class="withDraw">
       <header>
         <p>我的账户</p>
-        <router-link to="###"> <img src="static/img/withdraw/back.png" alt=""></router-link>
+        <router-link to="/person"> <img src="static/img/withdraw/back.png" alt=""></router-link>
       </header>
       <div class="cont">
         <img src="static/img/withdraw/masonry.png" alt="">

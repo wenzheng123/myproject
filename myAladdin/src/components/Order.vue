@@ -63,7 +63,7 @@
         this.getNum();
         this.ul = document.querySelector('.move');
         this.max = this.ul.offsetWidth - document.querySelector('.ord').offsetWidth;
-        location.replace('/list'+this.num);
+        location.replace('/#/list'+this.num);
     }
     }
 </script>

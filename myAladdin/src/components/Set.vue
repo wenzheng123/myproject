@@ -23,7 +23,9 @@
           <p>个人委托协议<img src="static/img/personal/more.png" alt=""></p>
         </router-link>
         <router-link to="###">
-          <p @click="inspect">检查更新<img src="static/img/personal/more.png" alt=""></p>
+          <p @click="inspect">检查更新
+            <img src="static/img/personal/more.png" alt="">
+          </p>
         </router-link>
         <p v-show="bol1">{{str1}}</p>
         <p v-show="bol2">{{str2}}</p>

@@ -35,7 +35,10 @@
           loop: true,
           direction: 'horizontal',
           speed: 1000,
-          autoplay: true,
+          // autoplay: true,
+          autoplay: {
+            disableOnInteraction: false,
+          },
           // 如果需要分页器
           pagination: {
             el: '.swiper-pagination',
