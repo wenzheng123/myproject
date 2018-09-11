@@ -7,13 +7,13 @@
     </router-link>
     <p> 阿拉粉心得</p>
   </div>
-    <ul class="top1">
-       <router-link :to="'/xinde'+(index+1)" v-for="(item,index) in nav" :class="{color:changeC==index}">
-        <li  @click="change(index)">
+    <ul class="top1" >
+      <li  @click="change(index)" v-for="(item,index) in nav">
+       <router-link  :to="'/xinde'+(index+1)" :class="{color:changeC==index}">
         {{item}}
         <img src="../../static/img/tiao.png" alt="" :class="{show:changeC==index}">
-      </li>
-      </router-link> |
+      </router-link>
+      </li> |
     </ul>
   </div>
 <router-view></router-view>
@@ -38,10 +38,10 @@
 </script>
 
 <style scoped>
-  .top1 li>.show{
+  .top1>li>a>.show{
     visibility: visible;
   }
-  .top1>.color{
+  .top1>li>.color{
     color: #e8585b;
   }
   .Xnav{
@@ -87,15 +87,15 @@
     background-color: #ffffff;
     border-bottom:1px solid #666666;
   }
-  .top1>a{
+  .top1>li{
     width: 49%;
     text-align: center;
     font-size: 0.3rem;
     float: right;
-   color: #4d4d4d;
+    color: #4d4d4d;
     position: relative;
   }
-  .top1>a>li>img{
+  .top1>li>a>img{
     height: 0.02rem;
     visibility: hidden;
     position: absolute;
@@ -104,7 +104,7 @@
     right: 0;
     margin: 0 auto;
   }
-  .top1>a:nth-of-type(1){
+  .top1>li:nth-of-type(1){
     float: left;
   }
 </style>

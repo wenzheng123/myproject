@@ -19,19 +19,17 @@
     data(){
       return{
         arr:[
-          {name:'注册',to:'login3'},
-          {name:'快速登录',to:'login1'},
-          {name:'密码登录',to:'login2'}
+          {name:'注册',to:'/login3/2'},
+          {name:'快速登录',to:'/login1'},
+          {name:'密码登录',to:'/login2/1'}
         ],
-        str:'新用户首次登录自动注册阿拉灯账户',
-        bol:true,
       }
     },
     methods:{
       change(name){
-        var a = {name:'注册',to:'login3'};
-        var b = {name:'快速登录',to:'login1'};
-        var c = {name:'密码登录',to:'login2'}
+        var a = {name:'注册',to:'/login3/2'};
+        var b = {name:'快速登录',to:'/login1'};
+        var c = {name:'密码登录',to:'/login2/1'}
           if (name == '注册'){
             Vue.set(this.arr,0,c);
             Vue.set(this.arr,1,a);
@@ -48,7 +46,25 @@
             Vue.set(this.arr,2,c);
           }
       },
+      where(){
+        if (this.$route.params.num==1){
+          this.arr=[
+            {name:'注册',to:'login3'},
+            {name:'密码登录',to:'login2'},
+            {name:'快速登录',to:'login1'},
+          ]
+        }else if(this.$route.params.num==2) {
+          this.arr=[
 
+            {name:'密码登录',to:'login2'},
+            {name:'注册',to:'login3'},
+            {name:'快速登录',to:'login1'},
+          ]
+        }
+      }
+    },
+    mounted(){
+        this.where()
     }
   }
 </script>
@@ -83,7 +99,7 @@
     line-height: 0.62rem;
     font-size: 0.3rem;
     position: relative;
-    text-align: center;
+
   }
   .login span:nth-of-type(1){
     float: left;
@@ -93,5 +109,12 @@
   float: right;
   margin-right: 0.4rem;
 }
-
+.login span:nth-of-type(2){
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+ width: 1.2rem;
+}
 </style>

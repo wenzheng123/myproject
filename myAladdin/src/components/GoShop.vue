@@ -137,6 +137,7 @@
       return {
         num:[1,1],
         num1:1,
+        users:'',
         data1:[
           {con:'会呼吸丝滑蜜粉',spec:'规格：蜜粉',pric:166.06,url:'../../static/img/huafen.png'}
         ],

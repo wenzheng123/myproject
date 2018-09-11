@@ -13,7 +13,7 @@
         <img class="line" src="static/img/login/line.png" alt="">
         <img src="static/img/login/clear.png" @click="clear('.code')" alt="" v-show="bol2">
       </div>
-      <p><router-link to="###"> 忘记密码？</router-link></p>
+      <p><router-link to="/forget/1"> 忘记密码？</router-link></p>
     </div>
     <div class="end">
       <router-link to="/person"><p>取消</p></router-link>

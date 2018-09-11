@@ -1,117 +1,140 @@
 <template>
-  <div class="wrap">
-    <div class="login">
-      <router-link to="###">
+    <div class="wrap">
+      <header>
+        <p>个人中心</p>
+        <router-link to="###"><img src="static/img/personal/msg.png" alt=""></router-link>
+        <router-link to="###"><img src="static/img/personal/news.png" alt=""></router-link>
+        <router-link to="/set"><img src="static/img/personal/set.png" alt=""></router-link>
+        </header>
+      <div class="login">
+        <router-link :to="nickName?'/personinfo':'###'">
         <div>
-          <router-link to="###"><img :src="headPhoto" alt="" v-show="bol"></router-link>
+          <img :src="headPhoto" alt="" v-show="bol">
         </div>
+        </router-link>
 
         <p class="nickName" v-if="nickName==''">
           <router-link to="/register">
-            <span @click="getData(nickName)" > 登录</span>
-            /
-            <span>注册</span>
-          </router-link>
+          <span @click="getData(nickName)" > 登录</span>
+          /
+          <span>注册</span>
+        </router-link>
         </p>
+
         <p class="nickName" v-else>{{nickName}}</p>
-      </router-link>
-      <img :src="bgImg" alt="">
-      <span><router-link to="###"> 账户提现</router-link></span>
-    </div>
-    <div class="order">
-      <p>
-        <span>我的订单</span>
-        <span class="more">
-            <router-link to="###">查看所有订单 <img src="../../static/img/personal/more.png" style="height:0.25rem" alt=""></router-link>
+
+        <img :src="bgImg" alt="">
+        <span><router-link to="/withdraw"> 账户提现</router-link></span>
+      </div>
+      <div class="order">
+        <p>
+          <span>我的订单</span>
+          <span class="more">
+            <router-link to="/order/0">查看所有订单 <img src="../../static/img/personal/more.png" style="height:0.25rem" alt=""></router-link>
           </span>
-      </p>
-      <ul>
-        <li v-for="item in order"><router-link to="###"><img :src="item.src" alt=""><p>{{item.name}}</p></router-link></li>
-      </ul>
-    </div>
-    <div class="returnMny">
-      <p>
-        <span>我的返金排号</span>
-        <span class="more">
-            <router-link to="###">查看更多 <img :src="'../../static/img/personal/'+(nickName==''?'more':'below')+'.png'" :style="(nickName==''?'height':'width')+':0.25rem'" alt=""></router-link></span>
-      </p>
-      <div v-for="(item,index) in returnMny" v-if="index < 4">
+        </p>
         <ul>
-          <li>{{item.time}}</li>
-          <li>消费：¥{{item.consume}}</li>
-          <li>排号：{{item.num}}</li>
+          <li v-for="item in order"><router-link :to="item.url"><img :src="item.src" alt=""><p>{{item.name}}</p></router-link></li>
         </ul>
       </div>
-    </div>
-    <div class="serve">
-      <ul>
-        <li v-for="item in my"><router-link to="###"> <span>{{item.num}}</span><p>{{item.name}}</p></router-link></li>
-      </ul>
-      <div class="ser">
-        <router-link to="###">
-          <div v-for="item in server">
+      <div class="returnMny">
+        <p>
+          <span>我的返金排号</span>
+          <span class="more">
+            <router-link to="###">查看更多 <img :src="'../../static/img/personal/'+(nickName==''?'more':'below')+'.png'" :style="(nickName==''?'height':'width')+':0.25rem'" alt=""></router-link></span>
+        </p>
+        <div v-for="(item,index) in returnMny" v-if="index < 4"  v-show="nickName">
+          <ul>
+            <li>{{item.time}}</li>
+            <li>消费：¥{{item.consume}}</li>
+            <li>排号：{{item.num}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="serve">
+        <ul>
+          <li v-for="(item,index) in my"><router-link :to="'/mine'+index"> <span>{{item.num}}</span><p>{{item.name}}</p></router-link></li>
+        </ul>
+        <div class="ser">
+
+          <div v-for="(item,index) in server">
+            <router-link :to="'/server'+index">
             <img :src="item.src" alt="">
             <p>{{item.name}}</p>
+            </router-link>
           </div>
-        </router-link>
+
+        </div>
       </div>
+      <end></end>
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
-  </div>
 </template>
 
 <script>
   import axios from 'axios'
-  export default {
-    name: "PersonalCenter",
-    data(){
-      return{
-        bol:false,
-        headPhoto:'static/img/personal/bgimg.png',
-        bgImg:'static/img/personal/bgimg.png',
-        nickName:'',
-        order:[
-          {src:'static/img/personal/notpay.png',name:'待支付'},
-          {src:'static/img/personal/notsend.png',name:'待发货'},
-          {src:'static/img/personal/nottake.png',name:'待收货'},
-          {src:'static/img/personal/complete.png',name:'交易完成'}
-        ],
-        my:[
-          {name:'我的神灯值',num:0},
-          {name:'我的足迹',num:0},
-          {name:'我的优惠券',num:0},
-          {name:'我的心得',num:0},
-        ],
-        server:[
-          {name:'我的商城',src:'static/img/personal/store.png'},
-          {name:'实名认证',src:'static/img/personal/approve.png'},
-          {name:'收货地址',src:'static/img/personal/site.png'},
-          {name:'关注公众号',src:'static/img/personal/attention.png'},
-          {name:'客服与反馈',src:'static/img/personal/service.png'},
-        ],
-        returnMny:[
-          {time:'2017/06/26',consume:100,num:10},
-          {time:'2017/06/26',consume:100,num:10},
-          {time:'2017/06/26',consume:100,num:10},
-          {time:'2017/06/26',consume:100,num:10},
-          {time:'2017/06/26',consume:100,num:10},
-          {time:'2017/06/26',consume:100,num:10}
-        ]
+  import End from "./End";
+    export default {
+        name: "PersonalCenter",
+      components: {End},
+      data(){
+          return{
+            bol:false,
+            headPhoto:'static/img/personal/bgimg.png',
+            bgImg:'static/img/personal/bgimg.png',
+            nickName:'',
+            order:[
+              {src:'static/img/personal/notpay.png',name:'待支付',url:'/order/1'},
+              {src:'static/img/personal/notsend.png',name:'待发货',url:'/order/2'},
+              {src:'static/img/personal/nottake.png',name:'待收货',url:'/order/3'},
+              {src:'static/img/personal/complete.png',name:'交易完成',url:'/order/4'}
+              ],
+            my:[
+              {name:'我的神灯值',num:0},
+              {name:'我的足迹',num:0},
+              {name:'我的优惠券',num:0},
+              {name:'我的心得',num:0},
+            ],
+            server:[
+              {name:'我的商城',src:'static/img/personal/store.png'},
+              {name:'实名认证',src:'static/img/personal/approve.png'},
+              {name:'收货地址',src:'static/img/personal/site.png'},
+              {name:'关注公众号',src:'static/img/personal/attention.png'},
+              {name:'客服与反馈',src:'static/img/personal/service.png'},
+            ],
+            returnMny:[
+              {time:'2017/06/26',consume:100,num:10},
+              {time:'2017/06/26',consume:100,num:10},
+              {time:'2017/06/26',consume:100,num:10},
+              {time:'2017/06/26',consume:100,num:10},
+              {time:'2017/06/26',consume:100,num:10},
+              {time:'2017/06/26',consume:100,num:10}
+            ]
 
-      }
-    },
-    methods:{
-      getData(name){
-        axios.get('/api/aladeng/person_data.php?name='+name).then(res =>{
-          this.bol = true;
-          this.headPhoto = res.data[0].headPhoto;
-          this.nickName = res.data[0].nickname;
-          this.bgImg = res.data[0].bgImg;
-          console.log(this.headPhoto,this.nickName,this.bgImg)
-        });
-      }
-    },
-  }
+          }
+      },
+      mounted(){
+        window.localStorage.removeItem('nickName')
+      },
+      updated(){
+        console.log(window.localStorage.getItem('nickName'))
+        if(window.localStorage.getItem('nickName')){
+          this.nickName = window.localStorage.getItem('nickName')
+        }
+        // this.nickName = this.$route.query.tel
+      },
+      methods:{
+          // getData(name){
+          //   axios.get('/api/aladeng/person_data.php?name='+name).then(res =>{
+          //     this.bol = true;
+          //     this.headPhoto = res.data[0].headPhoto;
+          //     this.nickName = res.data[0].nickname;
+          //     this.bgImg = res.data[0].bgImg;
+          //     console.log(this.headPhoto,this.nickName,this.bgImg)
+          //   });
+          // }
+      },
+    }
 </script>
 
 <style scoped>
@@ -120,12 +143,41 @@
     background-color: #f2f2f2;
     color: #666;
   }
-  .login {
+  .wrap header{
     width: 100%;
-    height: 2.4rem;
-    position: relative;
+    height: 1rem;
+    background-color: #f00;
     color: #fff;
+    font-size: .4rem;
+    text-align: center;
+    line-height: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
   }
+  .wrap header img{
+    width: .37rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .wrap header a:nth-of-type(1) img{
+    left: .2rem;
+  }
+  .wrap header a:nth-of-type(3) img{
+    right: .2rem;
+  }
+  .wrap header a:nth-of-type(2) img{
+    right: .88rem;
+  }
+.login {
+  width: 100%;
+  height: 2.4rem;
+  position: relative;
+  color: #fff;
+  margin-top:1rem ;
+}
   .login a{
     color: #fff;
   }
@@ -139,10 +191,10 @@
     top: 0.5rem;
     overflow: hidden;
   }
-  .login div>img{
-    width: 100%;
-    height: 100%;
-  }
+.login div>img{
+  width: 100%;
+  height: 100%;
+}
   .login > img{
     width: 100%;
     height: 2.41rem;
@@ -179,9 +231,9 @@
     float: right;
     font-size: 0.3rem;
   }more
-   .more  img{
-     vertical-align: middle;
-   }
+  .more  img{
+    vertical-align: middle;
+  }
   .order ul{
     height: 1rem;
     display: flex;
@@ -244,6 +296,11 @@
     display: inline-block;
     text-align: center;
     height: 1.2rem;
+  }
+  .ser div a{
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .ser div img{
     width: 0.4rem;

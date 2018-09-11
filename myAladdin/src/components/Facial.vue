@@ -125,6 +125,9 @@
         this.name = this.$route.query.id
           $('.list3>p').css('color','#e53e42')
       },
+      updated(){
+
+      },
       watch:{
       // arr:{
       //     handler(Val,oldVal){

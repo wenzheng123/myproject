@@ -17,7 +17,7 @@
     </div>
     <div class="end">
       <router-link to="/person"><p>取消</p></router-link>
-      <router-link to="###"><p>完成注册</p></router-link>
+      <router-link to="/setcode/code/请输入密码"><p>完成注册</p></router-link>
     </div>
   </div>
 </template>
@@ -27,7 +27,7 @@
     name: "Login3",
     data(){
       return{
-        str:'新用户首次登录自动注册阿拉灯账户',
+        str:'我们将发送验证码到您填写的手机号上，请注意查收',
         bol:false,
         bol1:true,
       }

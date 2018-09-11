@@ -11,11 +11,16 @@
         <img src="../../static/img/end5.png" alt="">
       </router-link>
     </li>
-    <li><img src="../../static/img/end4.png" alt=""></li>
-
     <li>
       <router-link to="/GoShop">
-      <img src="../../static/img/end3.png" alt="">
+        <img src="../../static/img/end3.png" alt="">
+      </router-link>
+
+    </li>
+
+    <li>
+      <router-link to="/person">
+        <img src="../../static/img/end4.png" alt="">
       </router-link>
     </li>
 

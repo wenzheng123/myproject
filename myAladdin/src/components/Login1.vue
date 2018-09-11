@@ -3,13 +3,13 @@
   <div class="info">
   <p v-show="bol1" class="hint">{{str}}</p>
     <div class="phone">
-      <input type="text" placeholder="请输入手机号" class="call" @blur="isPhone" @input="inp()"/>
+      <input type="number" placeholder="请输入手机号" class="call" @blur="isPhone" @input="inp()" v-model="telVal"/>
       <img src="static/img/login/phone.png" alt="">
       <img class="line" src="static/img/login/line.png" alt="">
       <img src="static/img/login/clear.png" @click="clear()" alt="" v-show="bol">
     </div>
   <div class="verify">
-    <input type="text" placeholder="请输入手机验证码" class="code" />
+    <input type="text" placeholder="请输入手机验证码" class="code"  />
     <img src="static/img/login/verify.png" alt="">
     <img class="line" src="static/img/login/line.png" alt="">
   </div>
@@ -17,7 +17,10 @@
 </div>
   <div class="end">
     <router-link to="/person"><p>取消</p></router-link>
-    <router-link to="###"><p>完成</p></router-link>
+    <router-link :to="{
+      path:'/person',
+      query:{tel:telVal},
+}"><p @click="getTel">完成</p></router-link>
   </div>
 </div>
 </template>
@@ -30,9 +33,20 @@
             str:'新用户首次登录自动注册阿拉灯账户',
             bol:false,
             bol1:true,
+            telVal:''
           }
       },
+      watch:{
+        telVal(curVal,oldVal){
+          this.telVal = curVal
+          console.log(curVal,oldVal)
+        }
+      },
       methods:{
+        getTel(){
+          window.localStorage.setItem('nickName',this.telVal)
+          window.localStorage.setItem('phone',this.telVal)
+        },
         clear(){
           document.querySelector('.call').value='';
           inp();

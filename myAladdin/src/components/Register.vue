@@ -4,7 +4,7 @@
   <div>
     <div>
   <router-link to="/login"><p class="reg">登录</p></router-link>
-  <router-link to="###"><p class="login">注册</p></router-link>
+  <router-link to="/register1"><p class="login">注册</p></router-link>
     </div>
   <router-link to="/person"> <img src="static/img/register/off.png" alt=""></router-link>
 </div>
