@@ -7,6 +7,7 @@
     </router-link>
     <p> 阿拉粉心得</p>
   </div>
+
     <ul class="top1" >
       <li  @click="change(index)" v-for="(item,index) in nav">
        <router-link  :to="'/xinde'+(index+1)" :class="{color:changeC==index}">

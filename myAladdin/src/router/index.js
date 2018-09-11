@@ -93,6 +93,7 @@ import Site from '@/components/Site'
 import Mine0 from '@/components/Mine0'
 import Detail from '@/components/Detail'
 import Convert from '@/components/Convert'
+import Liangxi from '@/components/Liangxi'
 Vue.use(Router)
 
 export default new Router({
@@ -102,6 +103,11 @@ export default new Router({
       path:'/lianlian',
       name:'lianlian',
       component:lianlian,
+    },
+    {
+      path:'/lian',
+      name:'Liangxi',
+      component:Liangxi,
     },
     {
       path:'/Xinde',

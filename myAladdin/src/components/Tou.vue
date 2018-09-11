@@ -42,7 +42,9 @@
 
 <style scoped>
   /*end*/
-
+.box{
+  overflow: hidden;
+}
 /*二*/
 .top_1{
   width: 100%;
@@ -51,6 +53,7 @@
   display: flex;
   justify-content: space-around;
   background-color: #ffffff;
+  margin-top: 1.1rem;
 }
 .top_1 li{
   line-height: 0.6rem;
@@ -67,7 +70,8 @@
     height: 1.1rem;
     background-color: #e53e42;
     position: fixed;
-    position: relative;
+    /*position: relative;*/
+    z-index: 33;
   }
   .nav1 img{
      position: absolute;
