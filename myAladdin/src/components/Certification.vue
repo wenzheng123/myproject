@@ -14,15 +14,19 @@
   <div class="card">
     <p>身份证照片<span>上传身份证正反面照片让通关更便捷</span></p>
     <div>
-
-      <div class="aa">
-
-        <img src="static/img/server/send1.png" alt="">
-        <p><input type="file"></p>
+      <div class="aa" >
+        <img :src="src[0]" alt="" class="fil2">
+        <p >
+          请上传
+          <input type="file" @change="getFile(true)" class="fil1" >
+        </p>
       </div>
       <div  class="aa">
-        <img src="static/img/server/send2.png" alt="">
-        <p>请上传</p>
+        <img :src="src[1]" alt="">
+        <p >
+          请上传
+          <input type="file" @change="getFile(false)" class="fil1" >
+        </p>
       </div>
       <div class="bb">
         <p><span>*</span>上传前请先查看样张</p>
@@ -68,17 +72,56 @@
 <script>
     export default {
         name: "Certification",
+      data(){
+          return {
+            src: ['static/img/server/send1.png','static/img/server/send1.png']
+          }
+      },
+
       methods:{
+          getFile (bol) {
+            let _this = this
+            if(bol){
+            var files = $('.fil1')[0].files[0]
+            //if (!e || !window.FileReader) return  // 看支持不支持FileReader
+            let reader = new FileReader()
+            reader.readAsDataURL(files) // 这里是最关键的一步，转换就在这里
+            reader.onloadend = function () {
+              //_this.src[0] = this.result
+              _this.$set(_this.src,0,this.result)
+            }
+            }else {
+              var files = $('.fil1')[1].files[0]
+              //if (!e || !window.FileReader) return  // 看支持不支持FileReader
+              let reader = new FileReader()
+              reader.readAsDataURL(files) // 这里是最关键的一步，转换就在这里
+              reader.onloadend = function () {
+                //_this.src[1] = this.result
+                _this.$set(_this.src,1,this.result)
+              }
+            }
+          },
           id($event){
             if (!/\d{18}/.test($event.target.value)) {
               $event.target.value = '';
             }
           }
-      }
+      },
+      mounted(){
+        console.log($('.fil1').files)
+      },
     }
 </script>
 
 <style scoped>
+  .fil1{
+    outline: none;
+    background-color: transparent;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    -khtml-opacity: 0;
+    opacity: 0;
+  }
   .certification header{
     width: 100%;
     height: 1rem;

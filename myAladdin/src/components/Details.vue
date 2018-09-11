@@ -1,5 +1,5 @@
 <template>
-  <v-touch v-on:swipeup="swipeup" class="vTouch">
+
   <div class="content" >
     <div class="top">
       <router-link to="/CutGoods">
@@ -195,9 +195,11 @@
         <span>加入购物车</span>
       </li>
     </ul>
+    <v-touch v-on:swipeup="swipeup" class="vTouch">
     <router-view></router-view>
+    </v-touch>
   </div>
-  </v-touch>
+
 </template>
 
 <script>
