@@ -53,12 +53,12 @@
       </div>
       <div class="serve">
         <ul>
-          <li v-for="(item,index) in my"><router-link :to="'/mine'+index"> <span>{{item.num}}</span><p>{{item.name}}</p></router-link></li>
+          <li v-for="(item,index) in my"><router-link :to="item.aa"> <span>{{item.num}}</span><p>{{item.name}}</p></router-link></li>
         </ul>
         <div class="ser">
 
           <div v-for="(item,index) in server">
-            <router-link :to="'/server'+index">
+            <router-link :to="item.aa">
             <img :src="item.src" alt="">
             <p>{{item.name}}</p>
             </router-link>
@@ -90,17 +90,17 @@
               {src:'static/img/personal/complete.png',name:'交易完成',url:'/order/4'}
               ],
             my:[
-              {name:'我的神灯值',num:0},
-              {name:'我的足迹',num:0},
-              {name:'我的优惠券',num:0},
-              {name:'我的心得',num:0},
+              {name:'我的神灯值',num:0,aa:"/mine0"},
+              {name:'我的足迹',num:0,aa:"/mine1"},
+              {name:'我的优惠券',num:0,aa:"###"},
+              {name:'我的心得',num:0,aa:"###"},
             ],
             server:[
-              {name:'我的商城',src:'static/img/personal/store.png'},
-              {name:'实名认证',src:'static/img/personal/approve.png'},
-              {name:'收货地址',src:'static/img/personal/site.png'},
-              {name:'关注公众号',src:'static/img/personal/attention.png'},
-              {name:'客服与反馈',src:'static/img/personal/service.png'},
+              {name:'我的商城',src:'static/img/personal/store.png',aa:"/server0"},
+              {name:'实名认证',src:'static/img/personal/approve.png',aa:"/server1"},
+              {name:'收货地址',src:'static/img/personal/site.png',aa:"/server2"},
+              {name:'关注公众号',src:'static/img/personal/attention.png',aa:"/server3"},
+              {name:'客服与反馈',src:'static/img/personal/service.png',aa:"/kefu"},
             ],
             returnMny:[
               {time:'2017/06/26',consume:100,num:10},
@@ -114,7 +114,7 @@
           }
       },
       mounted(){
-        window.localStorage.removeItem('nickName')
+        
       },
       updated(){
         console.log(window.localStorage.getItem('nickName'))
@@ -230,7 +230,7 @@
   .more{
     float: right;
     font-size: 0.3rem;
-  }more
+  }
   .more  img{
     vertical-align: middle;
   }

@@ -4,7 +4,11 @@
 
 <script>
     export default {
-        name: "Server4"
+        name: "Server4",
+     created(){
+          console.log(2)
+       location.replace('/#/kefu');
+     }
     }
 </script>
 

@@ -78,6 +78,7 @@
     text-align: center;
     line-height: 1rem;
     position: fixed;
+    z-index: 999;
     top: 0;
   }
   .order header img{

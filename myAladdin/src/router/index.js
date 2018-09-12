@@ -94,6 +94,7 @@ import Mine0 from '@/components/Mine0'
 import Detail from '@/components/Detail'
 import Convert from '@/components/Convert'
 import Liangxi from '@/components/Liangxi'
+import Mine1 from '@/components/Mine1'
 Vue.use(Router)
 
 export default new Router({
@@ -391,6 +392,11 @@ export default new Router({
       path:'/mine0',
       name:'Mine0',
       component:Mine0
+    },
+    {
+      path:'/mine1',
+      name:'Mine1',
+      component:Mine1
     },
     {
       path:'/site',

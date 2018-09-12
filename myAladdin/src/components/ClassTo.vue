@@ -71,7 +71,7 @@
       sure() {
         window.localStorage.setItem('name', this.str)
         if (this.str == "人气口红") {
-          location.replace('http://10.90.81.240:8080/#/Facial')
+          location.replace('/#/Facial')
         }
       }
     },

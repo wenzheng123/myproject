@@ -1,7 +1,6 @@
 <template>
   <v-touch v-on:swipeleft="swiperleft" v-on:swiperight="swiperright"   class="vTouch">
     <div class="Facial" >
-
   <div class="top">
     <div>
       <router-link :to="{
@@ -10,7 +9,7 @@
        }">
       <img src="../../static/img/Arrow.png" alt="">
       </router-link>
-      <span>面部护理</span>
+      <span >面部护理</span>
     </div>
   </div>
     <ul >

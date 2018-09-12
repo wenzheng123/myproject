@@ -26,9 +26,10 @@
       <span>收起</span>
       <img src="../../static/img/jie3.png" alt="" >
     </div>
+    <router-link to="/one">
     <div class="one5">
        确认支付
-    </div>
+    </div></router-link>
   </div>
 </div>
 </template>

@@ -38,6 +38,7 @@
   text-align: center;
   line-height: 1rem;
   position: relative;
+
 }
 .withDraw header img{
   width: .25rem;
@@ -48,7 +49,8 @@
   margin: auto;
 }
   .cont{
-    height: 11.35rem;
+    height: 10rem;
+    margin-top: 1rem;
     background-color: #f2f2f2;
     position: relative;
   }

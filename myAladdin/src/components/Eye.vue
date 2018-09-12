@@ -1,7 +1,7 @@
 <template>
 <div class="box">
   <div class="top">
-    <router-link to="/ceas"><img src="../../static/img/seek1.png" alt=""></router-link>
+    <router-link to="/one"><img src="../../static/img/seek1.png" alt=""></router-link>
     <router-link to="/ceas">
       <img src="../../static/img/w2.png" alt="" >
     </router-link>

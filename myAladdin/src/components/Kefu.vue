@@ -1,7 +1,7 @@
 <template>
     <div class="box">
       <div class="top">
-        <router-link to="/kefu"><img src="../../static/img/seek1.png" alt="" ></router-link>
+        <router-link to="/person"><img src="../../static/img/seek1.png" alt="" ></router-link>
         <p class="tz">反馈</p>
         <p>客服与反馈</p>
       </div>

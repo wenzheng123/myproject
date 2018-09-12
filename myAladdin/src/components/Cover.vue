@@ -1,6 +1,6 @@
 <template>
   <v-touch v-on:swiperight="swiperright" class="vTouch" >
-<div class="Cover" @touchmove.prevent>
+<div class="Cover" >
   <ul class="Cover1" >
     <li >
       <div >
@@ -159,7 +159,7 @@
   border-radius: 0.2rem;
   float: left;
   text-align: center;
-  line-height: 0.8rem;
+  line-height: 2rem;
 }
   .Cover1>li>div>img{
     width: 0.4rem;

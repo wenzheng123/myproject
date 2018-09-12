@@ -9,7 +9,7 @@
         <img src="static/img/personinfo/more.png" alt="" class="more">
       </router-link>
     </header>
-    <p>图片<img src="" alt="" v-show="false"></p>
+    <p>图片<img :src="pic1" alt="" v-show="false"></p>
     <router-view></router-view>
   </div>
 </template>
@@ -18,7 +18,14 @@
 
     export default {
         name: "ChangeHead",
-
+        data(){
+          return {
+            pic1:''
+          }
+        },
+      updated(){
+          this.pic1 = window.localStorage.getItem('pic1')
+      }
     }
 </script>
 
@@ -33,6 +40,7 @@
     line-height: 1rem;
     position: fixed;
     top: 0;
+    z-index: 99;
   }
   .head header .back{
     position: absolute;

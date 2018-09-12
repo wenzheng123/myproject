@@ -1,5 +1,5 @@
 <template>
-    <div class="change">
+    <div class="change">>
       <div>
         <p>从手机相册中选择</p>
         <p>拍照</p>
@@ -9,9 +9,9 @@
 </template>
 
 <script>
-    export default {
-        name: "ChangeHead1"
-    }
+  export default{
+
+  }
 </script>
 
 <style scoped>

@@ -127,12 +127,17 @@
       <p class="con5_2">加载更多</p>
     </div>
   </div>
+  <End></End>
 </div>
 </template>
 
 <script>
+  import End from "@/components/End"
   export default {
     name: "GoShop",
+    components:{
+      End
+    },
     data(){
       return {
         num:[1,1],
